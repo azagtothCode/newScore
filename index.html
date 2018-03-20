@@ -91,7 +91,7 @@
            </div>
          </div>
          <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-lg="row" layout-xl="row">
-           <div  id="color-btn"  flex-xs="50" hide-sm hide-md hide-lg hide-xl >
+           <div  id="color-btn-search"  flex-xs="50" hide-sm hide-md hide-lg hide-xl >
              <!-- <img class="icon-dwn" src="imgs/svg/download_logo.svg"> -->
              <form ng-controller="autoComplete as ctrl" ng-submit="$event.preventDefault()">
                <md-autocomplete
@@ -188,27 +188,35 @@
     <!--panel section content-->
     <md-content ng-controller="RightCtrl" layout-padding="">
       <md-subheader class="md-no-sticky">Redes Sociales</md-subheader>
-      <div style="text-align:center;" ng-cloak=""  >
-        <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
-          <img id="facebook-panel" src="imgs/svg/facebook.svg" aria-label="Facebook">
-        </md-button>
-        <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
-          <img id="twiter-panel" src="imgs/svg/twitter.svg" aria-label="Twitter">
-        </md-button>
-        <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">Instagram</md-tooltip>
-          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
-            <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
-          </a>
-        </md-button>
-        <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">Youtube</md-tooltip>
-          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
-            <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
-          </a>
-        </md-button>
+      <div style="text-align:center;" ng-cloak=""  layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" layout-xl="row" layout-sm="row" layout-xs="row" >
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip" >
+            <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+            <img id="facebook-panel" src="imgs/svg/facebook.svg" aria-label="Facebook">
+          </md-button>
+        </div>
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+            <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+            <img id="twiter-panel" src="imgs/svg/twitter.svg" aria-label="Twitter">
+          </md-button>
+        </div>
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+            <md-tooltip hide-xs md-direction="top">Instagram</md-tooltip>
+            <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+              <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
+            </a>
+          </md-button>
+        </div>
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+            <md-tooltip hide-xs md-direction="top">Youtube</md-tooltip>
+            <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+              <img id="heart-panel" src="imgs/svg/heart.svg" aria-label="Me gusta">
+            </a>
+          </md-button>
+        </div>
       </div>
       <md-divider ></md-divider>
       <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>

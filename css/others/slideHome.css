@@ -531,12 +531,12 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
 
   .btn-text-one {
     margin-left: 0px;
-    font-size: 17px;
+    font-size: 15px;
     margin-top: 5px;
   }
 
   md-autocomplete input:not(.md-input) {
-    font-size: 17px;
+    font-size: 15px;
   }
 
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
@@ -629,14 +629,20 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
   md-autocomplete input:not(.md-input) {
     font-size: 14px;
   }
-
-
 }
 
 @media only screen and (max-width: 411px) {
   md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
     margin-left: 20px;
     font-size: 20px;
+  }
+
+  .btn-text-one {
+    font-size: 12px;
+  }
+
+  md-autocomplete input:not(.md-input) {
+    font-size: 12px;
   }
 }
 
@@ -735,12 +741,6 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
   }
 }
 
-@media only screen and (max-width: 340px) {
-  .btn-text-one {
-    font-size: 13px;
-  }
-}
-
 @media only screen and (max-width: 320px) {
  .btn-text-two-csv{
    font-size: 6.5px;
@@ -814,4 +814,12 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
    margin-left: 15px;
  }
+
+ md-autocomplete input:not(.md-input) {
+  font-size:9px;
+  }
+
+  .btn-text-one {
+    font-size: 9px;
+  }
 }
