@@ -1,0 +1,8 @@
+<table ng-controller="deputyController" border="1">
+  <tr ng-repeat="deputyDates in deputysApi">
+      <td >
+        <a ng-bind="deputyDates.id_legislator_sil" ng-href="sites/profile.html?id={{deputyDates.id_legislator_sil}}">
+        </a>
+      </td>
+  </tr>
+</table>

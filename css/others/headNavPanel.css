@@ -1,0 +1,163 @@
+*:focus {  outline: none; }
+html, body{  font-family: 'Montserrat'; text-decoration: none;}
+
+.contentdemoBasicUsage md-content {height: 900px; }
+
+
+  #navbar{
+    background: #000;
+    position: fixed;
+    width: 100%;
+    opacity: 0.8;
+    z-index: 3;
+    height: auto;
+  }
+
+  #icon-logo{
+    background: url(../../imgs/svg/logo.svg);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    background-size: contain;
+    width: 100%;
+    height: auto;
+    background-position: left;
+  }
+
+  #nav-menu-index{
+    background: #EE4656;
+  }
+
+  #boton-borde {
+    background: #EE4353;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+
+  #boton-menu {
+    background: #EE4353;
+    margin-top: 15px;
+    margin-left: 5px;
+  }
+
+  #icon-menu {
+    width: 27px;
+    margin-top: 14px;
+    margin-left: 0px;
+  }
+
+  #img-site-panel{
+    width: 50px;
+    margin-top: 4px;
+    position: absolute;
+    margin-left: 7px;
+  }
+
+  #text-site-panel-menu{
+    margin-top: 24px;
+    margin-left: 60px;
+    letter-spacing: 1px;
+    color: #FFF;
+    font-family: 'Montserrat';
+    position: absolute;
+  }
+
+  #close-btn{
+    margin-left: 274px;
+    margin-top: -3px;
+  }
+
+  #icon-close{
+    width: 18px;
+  }
+
+  .links-panel{
+    color: #FFF;
+    font-size: 12px;
+    text-decoration: none;
+  }
+
+  #facebook-panel{
+    width: 15px;
+  }
+
+  #twiter-panel{
+    width: 15px;
+  }
+
+  #heart-panel{
+    width: 15px;
+  }
+
+  .md-subheader.md-default-theme, .md-subheader {
+      color:#EE4353;
+      background:#000;
+  }
+  md-sidenav.md-default-theme, md-sidenav, md-sidenav.md-default-theme md-content, md-sidenav md-content {
+      background:#000;
+  }
+
+
+@media only screen and (max-width: 768px) {
+  #img-site-panel {
+    margin-top: -3px;
+  }
+}
+
+@media only screen and (max-width: 736px) {
+  #img-site-panel{
+    margin-top: -2px;
+  }
+
+  #text-site-panel-menu{
+    margin-top: 18px;
+  }
+}
+
+@media only screen and (max-width: 667px) {
+  #img-site-panel{
+    margin-top: -1px;
+  }
+
+  #text-site-panel-menu{
+    margin-top: 19px;
+  }
+
+  #close-btn{
+    margin-left: 274px;
+    margin-top: -3px;
+  }
+
+  #icon-close{
+    width: 25px;
+  }
+
+  .links-panel{
+    color: #FFF;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #img-site-panel {
+    margin-top: 5.5px;
+    margin-left: 0px;
+  }
+
+  #text-site-panel-menu {
+    margin-top: 27px;
+    margin-left: 50px;
+  }
+
+  #icon-menu {
+    width: 30px;
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  #close-btn {
+    margin-left: 218px;
+  }
+
+
+}

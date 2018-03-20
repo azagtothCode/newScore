@@ -1,0 +1,781 @@
+<html>
+<head>
+  <meta http-equiv="content-language" content="es">
+  <meta charset="UTF-8"></meta>
+  <meta name="description" content="Web Site For Present Information about legislators"></meta>
+  <meta name="keywords" content="Legisladores,Senadores,Diputados,Score,Borde"></meta>
+  <meta name="author" content="Michelle Garduño"></meta>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+    <title>Borde Score</title>
+  <link rel="shortcut icon" href="../imgs/png/logo.png"  type="image/x-icon" sizes="16x16">
+  <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+  <link rel="stylesheet" href="../css/angular-material.css">
+  <!--Sty-->
+  <link rel="stylesheet" href="../css/styles_index.css">
+  <link rel="stylesheet" href="../css/styles_index_slide.css">
+  <link rel="stylesheet" href="../css/styles_hover.css">
+  <link rel="stylesheet" href="../css/styles_index_panel.css">
+  <link rel="stylesheet" href="../css/styles_slide.css">
+  <link rel="stylesheet" href="../css/loader.css">
+  <link rel="stylesheet" href="../css/styles_content.css">
+  <link rel="stylesheet" href="../css/styles_content_legislators.css">
+
+  <script src="../js/angular.min.js" ></script>
+  <script src="../js/angular-animate.min.js"></script>
+  <script src="../js/angular-aria.min.js"></script>
+  <script src="../js/angular-messages.min.js"></script>
+  <script src="../js/angular-route.js"></script>
+  <!-- Angular Material Library -->
+  <script src="../js/angular-material.min.js"></script>
+  <script src="../js/svg-assets-cache.js"></script>
+  <script src="../js/jquery.min.js"></script>
+  <script src="../js/Chart.min.js"></script>
+  <script src="../js/app.js"></script>
+  <script src="../js/methods_nav.js"></script>
+  <script src="../js/external_windows.js"></script>
+  <script src="../js/methods_panel.js"></script>
+  <script src="../js/loader.js"></script>
+  <script src="../js/graphs.js"></script>
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+</head>
+<body ng-app="score_federal">
+  <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+    <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+       <div flex-xs="15" flex-offset-sm="5" flex-sm="15" flex-offset-md="20" flex-md="10" flex-offset-lg="20" flex-lg="10" flex-offset-xl="20" flex-xl="10" ng-controller="OpenHomeController" ng-click="openHome()" id="icon-logo" >
+       </div>
+       <div flex-xs="75" flex-sm="60" flex-md="40" flex-gt-md="40" flex-lg="40" flex-gt-lg="40" flex-xl="40" >
+          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" hide-xs hide-sm  >
+            <div flex-offset-md="25" flex-md="75" flex-offset-gt-md="25" flex-gt-md="75" flex-offset-gt-lg="25" flex-gt-lg="75" flex-offset-lg="25" flex-lg="75" flex-offset-xl="25" flex-xl="75" >
+              <div layout-md="row" layout-lg="row" layout-gt-md="row">
+              </div>
+            </div>
+          </div>
+       </div>
+       <div flex-xs="10" flex-sm="20" flex-md="30" flex-gt-md="30" flex-lg="30" flex-gt-lg="30" flex-xl="30">
+        <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
+          <img id="icon-menu" src="../imgs/svg/logo_b.svg">
+         </md-button>
+         <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+           <img id="icon-menu" src="../imgs/svg/menu.svg"  >
+         </md-button>
+         <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
+       </div>
+    </div>
+  </div>
+  <div id="slide-head" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" id="div-circle-score">
+       <div flex-xs="15" flex-sm="25" flex-md="20" flex-gt-md="40" flex-lg="20" flex-gt-lg="20" flex-xl="20">
+       </div>
+       <div flex-xs="70" flex-sm="50" flex-md="60" flex-gt-md="20" flex-lg="60" flex-gt-lg="60" flex-xl="60" id="logo_score">
+       </div>
+       <div flex-xs="15" flex-sm="25" flex-md="20" flex-gt-md="40" flex-lg="20" flex-gt-lg="20" flex-xl="20">
+       </div>
+    </div>
+    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" id="div-buttons-score">
+       <div  flex-xs="45" flex-offset-sm="5" flex-sm="40" flex-offset-md="20" flex-md="25"  flex-lg="50" flex-gt-lg="50" flex-xl="50">
+         <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-lg="row" layout-xl="row">
+           <div  id="color-btn" ng-controller="OpenCSVController" ng-click="openCSV()" flex-offset-xs="5" flex-xs="45" flex-sm="50"   flex-md="50"  flex-offset-lg="40" flex-lg="25" flex-offset-xl="40" flex-xl="25">
+             <!-- <img class="icon-dwn" src="../imgs/svg/download_logo.svg"> -->
+             <span class="btn-text-one" >DESCARGAR CSV</span>
+           </div>
+           <div id="color-btn" ng-controller="OpenPanelScoreController" ng-click="openAbout($event)" flex-offset-xs="5" flex-xs="45" flex-sm="50"  flex-md="50" flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
+             <!-- <img class="icon-question" src="../imgs/svg/question_logo.svg"> -->
+             <span class="btn-text-one">CÓMO FUNCIONA</span>
+           </div>
+           <div hide-xs hide-sm  hide-md  flex-lg="5"  flex-xl="5">
+           </div>
+         </div>
+       </div>
+       <div flex-offset-xs="10" flex-xs="40" flex-offset-sm="10" flex-sm="40"  flex-offset-md="10" flex-md="25"  flex-lg="50" flex-gt-lg="50" flex-xl="50">
+         <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="row" layout-lg="row" layout-xl="row">
+           <div id="color-btn" ng-controller="OpenPanelScoreController"  ng-click="openSatates($event)" ng-cloak flex-xs="50" flex-sm="50"  flex-md="50"  flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
+             <!-- <img class="icon-party" src="../imgs/svg/party_logo.svg"> -->
+             <span class="btn-text-one">DEMOGRÁFICO</span>
+           </div>
+           <div id="color-btn" ng-controller="OpenPanelScoreController" ng-click="showAdvanced($event)"  flex-xs="50" flex-sm="50"  flex-md="50"  flex-offset-lg="5" flex-lg="25" flex-offset-xl="5" flex-xl="25">
+             <!-- <img class="icon-search" src="../imgs/svg/states/nada.svg"> -->
+             <span class="btn-text-one">ELECTORAL</span>
+           </div>
+           <div  hide-xs hide-sm hide-md flex-lg="40" flex-xl="40">
+           </div>
+         </div>
+       </div>
+    </div>
+   </div>
+   <script>
+   supurl='http://104.239.248.102:8000'
+   var URl = window.location.href;
+   var res = URl.substr(-7);
+
+   function openPerfilPage (url){
+     window.open(url)
+   }
+
+   function getQueryVariable(variable) {
+      // Estoy asumiendo que query es window.location.search.substring(1);
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+     //  alert(vars);
+      for (var i=0; i < vars.length; i++) {
+          var pair = vars[i].split("=");
+          if (pair[0] == variable) {
+              return pair[1];
+          }
+      }
+      return false;
+   }
+
+   (getQueryVariable('id'));
+
+     $.ajax({
+       url: supurl+'/diputados/dip/get',
+       method: "POST",
+       cache:false,
+       data: {legislator_chamber_sil:getQueryVariable('chamber')},
+       dataType: "json"
+     }).done(function(data) {
+       subject=data.dip;
+       console.log(subject);
+       nuevoarray = [];
+       for (var i = 0; i < subject.length; i++) {
+           val=subject[i];
+
+           var pick_party = val.legislator_party_sil;
+           var res_pick_party = pick_party.toLowerCase();
+           var pick_party_label = "<img onmouseover=this.src=\'../imgs/svg/partys/colors/"+res_pick_party+".svg\' onmouseout=this.src=\'../imgs/svg/partys/"+res_pick_party+".svg\' src='../imgs/svg/partys/"+res_pick_party+".svg' onClick=openPerfilPage('../other_sites/party.html?party="+res_pick_party+"&chamber="+val.legislator_chamber_sil+"') src='../imgs/svg/partys/"+res_pick_party+".svg' class='md-avatar '  >"
+
+
+           if(val.id_photo_sil){
+             var pick_legis = val.id_photo_sil;
+           }else{
+             var pick_legis = val.id_legislator_sil;
+           }
+           var res_pick = pick_legis;
+           var pick_legis_label = "<img  onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&cms="+val.legislator_com_res_sil+
+           "&kls="+val.legislator_klout_res_sil+
+           "&gls="+val.legislator_google_res_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"') src='../imgs/png/legisladores/"+res_pick+".png' class='md-avatar '  >";
+
+           var facebook = val.legislator_facebook_sil;
+
+             if(facebook == "FACEBOOK" || facebook == null){
+               var class_none_facebook = "none";
+             }else{
+               var class_none_facebook = "block";
+             }
+
+           var twitter = val.legislator_twitter_senate;
+
+             if(twitter == ""){
+               var class_none_twitter = "none";
+             }else{
+               var class_none_twitter = "block";
+             }
+
+           var mail = val.legislator_mail_sil;
+
+             if(mail == ""){
+               var class_none_mail = "none";
+             }else{
+               var class_none_mail = "block";
+             }
+
+             if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil=="diputado"){
+                 var chamber = "Diputado";
+
+             }
+
+             if(val.legislator_gender_senate == "Femenino"&& val.legislator_chamber_sil=="diputado"){
+                 var chamber = "Diputada";
+             }
+
+             if(val.legislator_gender_senate == "Masculino" && val.legislator_chamber_sil=="senador"){
+                 var chamber = "Senador";
+
+             }
+
+             if(val.legislator_gender_senate == "Femenino"&& val.legislator_chamber_sil=="senador"){
+                 var chamber = "Senadora";
+             }
+
+             var chamber_label = "<span onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&cms="+val.legislator_com_res_sil+
+             "&kls="+val.legislator_klout_res_sil+
+             "&gls="+val.legislator_google_res_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+chamber+"</span>";
+           var state = val.legislator_state_sil;
+           var score = val.legislator_score_sil;
+
+           if(score == 100 ){
+              var score_val = "<p onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+              val.legislator_extra_score_sil+
+              "&rol="+val.legislator_rol_score_sil+
+              "&ext="+val.legislator_news_score_sil+
+              "&cms="+val.legislator_com_res_sil+
+              "&kls="+val.legislator_klout_res_sil+
+              "&gls="+val.legislator_google_res_sil+
+              "&iap="+val.legislator_ini_ap_sil+
+              "&ide="+val.legislator_ini_de_sil+
+              "&ipe="+val.legislator_ini_pe_sil+
+              "&ipr="+val.legislator_ini_pr_sil+
+              "&ire="+val.legislator_ini_re_sil+
+              "&pap="+val.legislator_pda_ap_sil+
+              "&pde="+val.legislator_pda_de_sil+
+              "&ppe="+val.legislator_pda_pe_sil+
+              "&ppr="+val.legislator_pda_pr_sil+
+              "&pre="+val.legislator_pda_re_sil+"') >"+score+"</p>";
+            //  var score_val = "<p onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"') >"+score+"</p>";
+           }else if(score < 100 && score  > 20){
+             var score_val = "<span onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&cms="+val.legislator_com_res_sil+
+             "&kls="+val.legislator_klout_res_sil+
+             "&gls="+val.legislator_google_res_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
+           }else if(score  < 20 && score  > 10){
+             var score_val = "<span class='menorVeinte' onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&cms="+val.legislator_com_res_sil+
+             "&kls="+val.legislator_klout_res_sil+
+             "&gls="+val.legislator_google_res_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
+           }else if(score  < 10){
+             var score_val = "<span class='menorDiez' onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+             val.legislator_extra_score_sil+
+             "&rol="+val.legislator_rol_score_sil+
+             "&ext="+val.legislator_news_score_sil+
+             "&cms="+val.legislator_com_res_sil+
+             "&kls="+val.legislator_klout_res_sil+
+             "&gls="+val.legislator_google_res_sil+
+             "&iap="+val.legislator_ini_ap_sil+
+             "&ide="+val.legislator_ini_de_sil+
+             "&ipe="+val.legislator_ini_pe_sil+
+             "&ipr="+val.legislator_ini_pr_sil+
+             "&ire="+val.legislator_ini_re_sil+
+             "&pap="+val.legislator_pda_ap_sil+
+             "&pde="+val.legislator_pda_de_sil+
+             "&ppe="+val.legislator_pda_pe_sil+
+             "&ppr="+val.legislator_pda_pr_sil+
+             "&pre="+val.legislator_pda_re_sil+"')>"+score+"</span>";
+           }
+
+           var name = val.legislator_first_name_sil;
+           var label_name = "<span onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&cms="+val.legislator_com_res_sil+
+           "&kls="+val.legislator_klout_res_sil+
+           "&gls="+val.legislator_google_res_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+name+"</span>";
+
+           var last_name = val.legislator_last_name_sil;
+           var label_last_name = "<span onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&cms="+val.legislator_com_res_sil+
+           "&kls="+val.legislator_klout_res_sil+
+           "&gls="+val.legislator_google_res_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+last_name+"</span>";
+
+           var representation = val.legislator_election_sil;
+
+             if(representation == "RP" ){
+               representation = "Representación Proporcional"
+             }
+
+             if(representation == "MR"){
+               representation = "Mayoria Relativa"
+             }
+
+             if(representation == "PM"){
+               representation = "Representación Proporcional"
+             }
+
+             var label_representation = "<span onClick=openPerfilPage('representation.html?rep="+val.legislator_election_sil+"&chamber="+val.legislator_chamber_sil+"')>"+representation+"</span>";;
+
+
+             var post_commision = val.legislator_commission_sil;
+
+            var commission_string  = JSON.stringify(post_commision);
+
+
+
+           var label_post_commision = "<span onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&cms="+val.legislator_com_res_sil+
+           "&kls="+val.legislator_klout_res_sil+
+           "&gls="+val.legislator_google_res_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')></span>";
+
+           if(state == " Distrito Federal"){
+             state = "CDMX";
+           }
+
+           if(state == " Baja California"){
+             state = "BC";
+           }
+
+           if(state == " Baja California Sur"){
+             state = "BCS";
+           }
+           var pick_state = state.trim();
+
+           switch (pick_state) {
+               case "Aguascalientes":
+                   var pick_state = "agc";
+                   break;
+               case "N/A":
+                   var class_state_none = "";
+                   var state = " ";
+                   var pick_state = "nada";
+                   break;
+               case "S/E":
+                   var class_state_none = "";
+                   var state = "méxico";
+                   var pick_state = "nada";
+                   break;
+               case "Nuevo León":
+                   var pick_state = "nl";
+                   break;
+               case "México":
+               var pick_state = "cdmx";
+                   break;
+               case "Querétaro":
+                   var pick_state = "queretaro";
+                   break;
+               case "Distrito Federal":
+                   var pick_state = "df";
+                   break;
+               case "Quintana Roo":
+                   var pick_state = "qr";
+                   break;
+               case "Michoacán":
+                   var pick_state = "michoacan";
+                   break;
+               case "Yucatán":
+                   var pick_state = "yucatan";
+                   break;
+               case "Baja California":
+                   var pick_state = "bc";
+                   break;
+               case "Baja California Sur":
+                   var pick_state = "bcs";
+                   break;
+               case "San Luis Potosí":
+                   var pick_state = "slp";
+                   break;
+                   default:
+                   pick_state = state.toLowerCase().trim();
+                   class_state_none = "block";
+           }
+
+
+           var state_label = "<span onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&cms="+val.legislator_com_res_sil+
+           "&kls="+val.legislator_klout_res_sil+
+           "&gls="+val.legislator_google_res_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"')>"+state+"</span>"
+           var pick_state_label = "<img onClick=openPerfilPage('../other_sites/profile.html?id="+val.id_legislator_sil+"&work="+
+           val.legislator_extra_score_sil+
+           "&rol="+val.legislator_rol_score_sil+
+           "&ext="+val.legislator_news_score_sil+
+           "&cms="+val.legislator_com_res_sil+
+           "&kls="+val.legislator_klout_res_sil+
+           "&gls="+val.legislator_google_res_sil+
+           "&iap="+val.legislator_ini_ap_sil+
+           "&ide="+val.legislator_ini_de_sil+
+           "&ipe="+val.legislator_ini_pe_sil+
+           "&ipr="+val.legislator_ini_pr_sil+
+           "&ire="+val.legislator_ini_re_sil+
+           "&pap="+val.legislator_pda_ap_sil+
+           "&pde="+val.legislator_pda_de_sil+
+           "&ppe="+val.legislator_pda_pe_sil+
+           "&ppr="+val.legislator_pda_pr_sil+
+           "&pre="+val.legislator_pda_re_sil+"') id='image-state-card' style='display:"+class_state_none+"' onmouseover=this.src=\'../imgs/svg/states/colors/"+pick_state+".svg\' onmouseout=this.src=\'../imgs/svg/states/"+pick_state+".svg\' src='../imgs/svg/states/"+pick_state+".svg'>"
+
+
+           var valor = val.legislator_party_sil;
+
+             $("#depscontent").append('\
+             <div style="background:#EEE; padding-top:10px;" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
+               <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100" >\
+                 <div id="content-cards"  layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
+                   <div  flex-md="40" flex-gt-md="30"  flex-lg="55"  flex-xl="50" class="flex-xl-50 flex-md-40 flex-lg-50 flex-gt-md-30 flex-gt-lg-50">\
+                     <div layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
+                       <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
+                         <div  flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100">\
+                           <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
+                             <div id="califichas-content-happy" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                                 <a href="http://pac.bordepolitico.com/" target="_blank">\
+                                   <img onmouseover="this.src=' + '\'../imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/cali_happy.svg\'' + '" src="../imgs/svg/cali_happy.svg"> </a>\
+                             </div>\
+                             <div id="califichas-content-sad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                                 <a href="http://pac.bordepolitico.com/" target="_blank">\
+                                   <img onmouseover="this.src=' + '\'../imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/cali_sad.svg\'' + '" src="../imgs/svg/cali_sad.svg"> </a>\
+                             </div>\
+                             <div  id="califichas-content-bad" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                                 <a href="http://pac.bordepolitico.com/" target="_blank">\
+                                   <img onmouseover="this.src=' + '\'../imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/cali_bad.svg\'' + '" src="../imgs/svg/cali_bad.svg"> </a>\
+                             </div>\
+                             <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-md="40" flex-gt-md="40" flex-gt-lg="40" flex-lg="40" flex-xl="40" class="ng-scope flex-xl-40 flex-md-40 flex-lg-40 flex-gt-md-40 flex-gt-lg-40">\
+                               <img  onmouseover="this.src=' + '\'../imgs/svg/score.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/score_color.svg\'' + '" src="../imgs/svg/score_color.svg">\
+                                 '+score_val+'\
+                               </img>\
+                             </div>\
+                           </div>\
+                           <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
+                             <div ng-controller="OpenPerfilController" id="image-card" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" class="ng-scope flex-xl-60 flex-md-60 flex-lg-60 flex-gt-md-60 flex-gt-lg-60">\
+                              '+pick_legis_label+'\
+                              </div>\
+                             <div id="image-party-card" flex-md="25" flex-gt-md="25" flex-gt-lg="25" flex-lg="25" flex-xl="25"  class="flex-xl-25 flex-md-25 flex-lg-25 flex-gt-md-25 flex-gt-lg-25">\
+                              '+pick_party_label+'\
+                            </div>\
+                             <div style="text-align:right;" id="content-socials-card" hide show-xl  show-lg show-md  flex-xl="25" flex-lg="25" flex-md="25" class="hide show-lg show-xl show-md flex-xl-25 flex-lg-25 flex-md-25">\
+                               <div layout-xl="row" layout-lg="row" layout-md="row" class="layout-xl-row layout-lg-row layout-md-row">\
+                                 <div layout-xl="column" layout-lg="column" layout-lg="column" class="layout-xl-column layout-lg-column layout-md-column">\
+                                   <div id="facebook-card">\
+                                     <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                                       <img onmouseover="this.src=\'../imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/facebook_cards.svg\'" src="../imgs/svg/facebook_cards.svg">\
+                                     </a>\
+                                   </div>\
+                                   <div layout-xl="column" id="twitter-card" class="layout-xl-column">\
+                                     <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+                                       <img onmouseover="this.src=\'../imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/twiter_cards.svg\'" src="../imgs/svg/twiter_cards.svg">\
+                                     </a>\
+                                   </div>\
+                                   <div layout-xl="column" id="mail-card" class="layout-xl-column">\
+                                     <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+                                       <img onmouseover="this.src=\'../imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/mail_cards.svg\'" src="../imgs/svg/mail_cards.svg">\
+                                     </a>\
+                                   </div>\
+                                 </div>\
+                               </div>\
+                             </div>\
+                           </div>\
+                         </div>\
+                       </div>\
+                     </div>\
+                   </div>\
+                   <div flex-md="90" flex-gt-md="80"  flex-lg="45"  flex-xl="50" class="flex-lg-50 flex-xl-50 flex-md-90 flex-lg-50 flex-gt-md-80 flex-gt-lg-50">\
+                     <div layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row layout-gt-lg-row">\
+                       <div flex-md="100" flex-gt-md="100" flex-gt-lg="100" flex-lg="100" flex-xl="100" class="flex-xl-100 flex-md-100 flex-lg-100 flex-gt-md-100 flex-gt-lg-100">\
+                         <div ng-controller="OpenPanelScoreController" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
+                           <div layout-xl="column" layout-lg="column" layout-gt-lg="column" layout-md="column" layout-gt-md="column" class="layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
+                             <div layout-xl="row" layout-lg="row" layout-md="row" layout-gt-md="row" class="layout-xl-row layout-md-row layout-lg-row layout-gt-md-row">\
+                               <div flex-xl="80" flex-lg="80" flex-gt-lg="80" flex-md="80" flex-gt-md="80" class="flex-xl-80 flex-md-80 flex-lg-80 flex-gt-md-80 flex-gt-lg-80">\
+                                 <div id="text-chamber-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
+                                 '+chamber_label+'\
+                                 </div>\
+                                 <div id="text-state-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
+                                   '+state_label+'\
+                                 </div>\
+                               </div>\
+                               <div style="text-align:center;" flex-xl="20" flex-lg="20" flex-gt-lg="20" flex-md="20" flex-gt-md="20" ng-mouseover="changeImageState=true" ng-mouseleave="changeImageState=false" ng-init="changeImageState=false" class="flex-xl-20 flex-md-20 flex-lg-20 flex-gt-md-20 ">\
+                               '+pick_state_label+'\
+                               </div>\
+                             </div>\
+                             </div>\
+                             <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
+                               '+label_name+'\
+                             </div>\
+                             <div ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-name-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
+                               '+label_last_name+'\
+                             </div>\
+                           <div id="text-election-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column">\
+                             '+label_representation+'\
+                           </div>\
+                           <div  ng-controller="OpenPerfilController" ng-click="openPerfilPage(item.id)" id="text-commission-card" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column" class="ng-scope ng-binding layout-xl-column layout-md-column layout-lg-column layout-gt-md-column layout-gt-lg-column" role="button" tabindex="0">\
+                           </div>\
+                         </div>\
+                       </div>\
+                     </div>\
+                   </div>\
+                   <div  flex-md="10" flex-gt-md="20" flex-lg="0"  flex-xl="0" class="flex-xl-0 flex-md-0 flex-lg-0 flex-gt-md-20 flex-gt-lg-50">\
+                   </div>\
+                 </div>\
+               </div>\
+             </div>');
+
+             $("#depscontentMobile").append('\
+             <div layout-xs="column" layout-sm="column"  class="ng-scope layout-xs-column layout-sm-column">\
+               <md-list role="list">\
+                 <div id="content-cards" layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                   <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                     <div flex-xs="35" flex-sm="40" class="flex-xs-35 flex-sm-40">\
+                     </div>\
+                     <div flex-xs="30" flex-sm="20" class="flex-xs-30 flex-sm-20">\
+                       <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                         <div id="califichas-content-happy" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
+                             <a href="http://bordepolitico.com/pac" target="_blank">\
+                               <img onmouseover="this.src=' + '\'../imgs/svg/cali_happy_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/cali_happy.svg\'' + '" src="../imgs/svg/cali_happy.svg"> </a>\
+                         </div>\
+                         <div id="califichas-content-sad" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
+                             <a href="http://bordepolitico.com/pac" target="_blank">\
+                               <img onmouseover="this.src=' + '\'../imgs/svg/cali_sad_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/cali_sad.svg\'' + '" src="../imgs/svg/cali_sad.svg"> </a>\
+                         </div>\
+                         <div  id="califichas-content-bad" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
+                             <a href="http://bordepolitico.com/pac" target="_blank">\
+                               <img onmouseover="this.src=' + '\'../imgs/svg/cali_bad_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/cali_bad.svg\'' + '" src="../imgs/svg/cali_bad.svg"> </a>\
+                         </div>\
+                         <div style="z-index:2;" ng-controller="OpenPerfilController" id="score-card" style="text-align:center;" flex-sm="20" flex-xs="20" class="flex-xs-20 flex-sm-20">\
+                           <img ng-click="openPerfilPage(item.id)" onmouseover="this.src=' + '\'../imgs/svg/score_color.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/score.svg\'' + '" src="../imgs/svg/score.svg">\
+                             '+score_val+'\
+                           </img>\
+                         </div>\
+                       </div>\
+                       <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                         <div ng-controller="OpenPerfilController" id="image-card" flex-sm="50" flex-xs="50" class="ng-scope flex-xs-50 flex-sm-50">\
+                           <img ng-click="openPerfilPage(item.id)" src="../imgs/png/legisladores/'+res_pick+'.png" class="md-avatar">\
+                         </div>\
+                         <div id="image-party-card" flex-sm="25" flex-xs="25"  class="flex-sm-25 flex-xs-25">\
+                           <img onmouseover="this.src=' + '\'../imgs/svg/partys/colors/'+res_pick_party+'.svg\'' + '" onmouseout="this.src=' + '\'../imgs/svg/partys/'+res_pick_party+'.svg\'' + '" src="../imgs/svg/partys/'+res_pick_party+'.svg"> </a>\
+                         </div>\
+                         <div style="text-align:right;" id="content-socials-card" flex-sm="25" flex-xs="25" class="flex-sm-25 flex-xs-25">\
+                           <div layout-xs="row" layout-sm="row" class=" layout-xs-row layout-sm-row">\
+                             <div layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                               <div id="facebook-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a style="display:'+class_none_facebook+'" class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/'+facebook+'">\
+                                   <img onmouseover="this.src=\'../imgs/svg/facebook_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/facebook_cards.svg\'" src="../imgs/svg/facebook_cards.svg">\
+                                 </a>\
+                               </div>\
+                               <div id="twitter-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a style="display:'+class_none_twitter+'" href="https://twitter.com/'+twitter+'" target="_blank">\
+                                   <img onmouseover="this.src=\'../imgs/svg/twiter_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/twiter_cards.svg\'" src="../imgs/svg/twiter_cards.svg">\
+                                 </a>\
+                               </div>\
+                               <div id="mail-card" layout-xs="column" layout-sm="column" class="layout-sm-column layout-xs-column">\
+                                 <a  style="display:'+class_none_mail+'" href="mailto:'+mail+'">\
+                                   <img onmouseover="this.src=\'../imgs/svg/mail_cards_color.svg\'" onmouseout="this.src=\'../imgs/svg/mail_cards.svg\'" src="../imgs/svg/mail_cards.svg">\
+                                 </a>\
+                               </div>\
+                             </div>\
+                           </div>\
+                         </div>\
+                       </div>\
+                      </div>\
+                     <div flex-xs="35" flex-sm="40" class="flex-xs-35 flex-sm-40">\
+                    </div>\
+                   </div>\
+                 </div>\
+                 <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                   <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                     <div flex-xs="30" flex-sm="40" class="flex-xs-30 flex-sm-40">\
+                     </div>\
+                     <div flex-xs="40" flex-sm="20" class="flex-xs-40 flex-sm-20">\
+                      <div layout-xs="column" layout-sm="column" class="layout-xs-column layout-sm-column">\
+                         <div id="text-chamber-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                         '+chamber+'\
+                         </div>\
+                         <div style="display:'+class_state_none+'" id="text-state-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                           <div layout-xs="row" layout-sm="row" class="layout-xs-row layout-sm-row">\
+                              <div flex-xs="75" flex-sm="75" class="ng-scope flex-xs-75 flex-sm-75">\
+                               <span>  por: </span>\
+                               '+state+'\
+                              </div>\
+                              <div flex-xs="25" flex-sm="25" class="ng-scope flex-xs-25 flex-sm-25">\
+                               <img id="image-state-card" style="display:'+class_state_none+'" onmouseover="this.src=\'../imgs/svg/states/colors/'+pick_state+'.svg\'" onmouseout="this.src=\'../imgs/svg/states/'+pick_state+'.svg\'" src="../imgs/svg/states/'+pick_state+'.svg">\
+                              </div>\
+                            </div>\
+                         </div>\
+                         <div  id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                           '+name+'\
+                         </div>\
+                         <div  id="text-name-card" ng-click="openPerfil(item.id)" layout-xs="column" layout-sm="column" role="button" tabindex="0" class="layout-xs-column layout-sm-column">\
+                           '+last_name+'\
+                         </div>\
+                         <div id="text-election-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column">\
+                         '+representation+'\
+                         </div>\
+                       <div  ng-click="openPerfil(item.id)" id="text-commission-card" layout-xs="column" layout-sm="column" class="ng-binding layout-xs-column layout-sm-column" role="button" tabindex="0">\
+                       </div>\
+                      </div>\
+                     </div>\
+                     <div flex-xs="30" flex-sm="40" class="flex-xs-30 flex-sm-40">\
+                     </div>\
+                   </div>\
+                 </div>\
+               </md-list>\
+             </div>');
+         }
+     });
+   </script>
+    <div hide-md hide-gt-lg hide-lg hide-xl ng-cloak layout-xs="column" layout-sm="column">
+      <md-content  style="background:#000;">
+        <md-tabs id="tabs-responsive"  md-border-bottom>
+          <md-tab  class="md-display-2" label="Diputados">
+            <md-content id="depscontentMobile" style="background:#EEE;" class="md-padding">
+
+            </md-content>
+          </md-tab>
+          <md-tab class="md-display-2" label="Senadores">
+            <md-content id="senatorscontentMobile" style="background:#EEE;" class="md-padding">
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+    </div>
+    <div show-md show-gt-lg  show-lg show-xl hide-xs hide-sm ng-cloak layout-md="row" layout-gt-md="row"  layout-gt-lg="row" layout-lg="row" layout-xl="row">
+      <div style="background:#EEE;" flex-md="35" flex-gt-md="35" flex-gt-lg="35" flex-lg="35" flex-xl="35"  ></div>
+      <md-content id="depscontent"  flex-md="30" flex-gt-md="30" flex-lg="30" flex-xl="30" >
+      </md-content>
+      <div style="background:#EEE;" flex-md="35" flex-gt-md="35" flex-gt-lg="35" flex-lg="35" flex-xl="35"  ></div>
+    </div>
+    </div>
+  </div>
+  <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
+    <!--panel section head-->
+    <md-toolbar flex="row"  id="nav-menu-index" >
+      <div>
+        <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="../imgs/png/logo_borde.png">
+        <span flex id="text-site-panel-menu">Menú Principal</span>
+          <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
+            <img id="icon-close" src="../imgs/svg/close.svg">
+          </md-button>
+      </div>
+    </md-toolbar>
+    <!--panel section content-->
+    <md-content ng-controller="RightCtrl" layout-padding="">
+      <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  ng-cloak target="_blank"  class="md-3-line" ng-repeat="item in linksDirectory" >
+          <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" ng-cloak class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel">{{ item.who }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+      <md-divider ></md-divider>
+      <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
+        <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
+          <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+          <div class="md-list-item-text" layout="column">
+            <span class="links-panel">{{ item.who }}</span>
+          </div>
+        </md-list-item>
+      </md-list>
+      <md-divider></md-divider>
+      <md-subheader id="NoHover" class="md-no-sticky">Contacto</md-subheader>
+      <md-list ng-controller="PanelContentIndexController" ng-cloakflex>
+        <md-list-item class="md-3-line" ng-repeat="item in phones" ng-click="null">
+          <img id="icon-panel" ng-src="../{{item.options.face}}?{{$index}}" class="md-avatar" alt="{{item.type}}" />
+          <div class="md-list-item-text" layout="column">
+            <a href="tel:{{ item.number }} " class="links-panel">{{ item.number }}  {{ item.type }}</a>
+          </div>
+        </md-list-item>
+      </md-list>
+      <!-- class="fabSpeedDialdemoBasicUsage" -->
+      <div style="text-align:center;" ng-cloak=""  >
+        <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+          <img id="facebook-panel" src="../imgs/svg/facebook.svg" aria-label="Facebook">
+        </md-button>
+        <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+          <img id="twiter-panel" src="../imgs/svg/twitter.svg" aria-label="Twitter">
+        </md-button>
+        <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+          <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
+          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+            <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
+          </a>
+        </md-button>
+      </div>
+    </md-content>
+  </md-sidenav>
+
+</body>
