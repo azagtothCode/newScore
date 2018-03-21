@@ -247,10 +247,10 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
   $scope.status = '  ';
   $scope.customFullscreen = false;
 
-  $scope.showAdvanced = function(ev) {
+  $scope.openAbout = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'other_sites/party.score.html',
+      templateUrl: 'sites/about.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
@@ -265,10 +265,82 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
     });
   };
 
-  $scope.openAbout = function(ev) {
+  $scope.openPartys = function(ev) {
     $mdDialog.show({
       controller: DialogController,
-      templateUrl: 'sites/about.score.html',
+      templateUrl: 'sites/party.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+  $scope.openStates = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'sites/states.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+  $scope.openSex = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'sites/sex.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+  $scope.openAge = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'sites/age.score.html',
+      parent: angular.element(document.body),
+      targetEvent: ev,
+      clickOutsideToClose:true,
+      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
+    })
+    .then(function(answer) {
+      // $scope.status = 'You said the information was "' + answer + '".';
+      console.log(answer);
+    }, function() {
+      // $scope.status = 'You cancelled the dialog.';
+      console.log("close dialog");
+    });
+  };
+
+  $scope.openElection = function(ev) {
+    $mdDialog.show({
+      controller: DialogController,
+      templateUrl: 'sites/election.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,
@@ -323,25 +395,6 @@ app.controller('OpenPanelScoreController', function($scope, $mdDialog) {
     $mdDialog.show({
       controller: DialogController,
       templateUrl: 'sites/states.profile.score.html',
-      parent: angular.element(document.body),
-      targetEvent: ev,
-      clickOutsideToClose:true,
-      fullscreen: $scope.customFullscreen // Only for -xs, -sm breakpoints.
-    })
-    .then(function(answer) {
-      // $scope.status = 'You said the information was "' + answer + '".';
-      console.log(answer);
-    }, function() {
-      // $scope.status = 'You cancelled the dialog.';
-      console.log("close dialog");
-    });
-  };
-
-
-  $scope.openPartys = function(ev) {
-    $mdDialog.show({
-      controller: DialogController,
-      templateUrl: 'sites/party.profile.score.html',
       parent: angular.element(document.body),
       targetEvent: ev,
       clickOutsideToClose:true,

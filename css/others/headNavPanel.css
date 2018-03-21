@@ -1,108 +1,170 @@
-*:focus {  outline: none; }
-html, body{  font-family: 'Montserrat'; text-decoration: none;}
+@font-face {font-family: Montserrat; src: url(../../docs/mon.ttf);} *:focus {outline: none;}
+html, body{font-family: 'Montserrat'; text-decoration: none;}
+.contentdemoBasicUsage md-content {height: 900px;}
 
-.contentdemoBasicUsage md-content {height: 900px; }
+#navbar{
+  background: #000;
+  position: fixed;
+  width: 100%;
+  opacity: 0.8;
+  z-index: 3;
+  height: auto;
+}
 
+#icon-logo{
+  background: url(../../imgs/svg/logo.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  background-size: contain;
+  width: 100%;
+  height: auto;
+  background-position: left;
+}
 
-  #navbar{
-    background: #000;
-    position: fixed;
-    width: 100%;
-    opacity: 0.8;
-    z-index: 3;
-    height: auto;
-  }
+#nav-menu-index{
+  background: #EE4656;
+}
 
-  #icon-logo{
-    background: url(../../imgs/svg/logo.svg);
-    background-repeat: no-repeat;
-    cursor: pointer;
-    background-size: contain;
-    width: 100%;
-    height: auto;
-    background-position: left;
-  }
+#boton-borde {
+  background: #EE4353;
+  margin-top: 15px;
+  margin-left: 5px;
+}
 
-  #nav-menu-index{
-    background: #EE4656;
-  }
+#boton-menu {
+  background: #EE4353;
+  margin-top: 15px;
+  margin-left: 5px;
+}
 
-  #boton-borde {
-    background: #EE4353;
-    margin-top: 15px;
-    margin-left: 5px;
-  }
+#icon-menu {
+  width: 27px;
+  margin-top: 14px;
+  margin-left: 0px;
+}
 
-  #boton-menu {
-    background: #EE4353;
-    margin-top: 15px;
-    margin-left: 5px;
-  }
+#img-site-panel{
+  width: 50px;
+  margin-top: 4px;
+  position: absolute;
+  margin-left: 7px;
+}
 
-  #icon-menu {
-    width: 27px;
-    margin-top: 14px;
-    margin-left: 0px;
-  }
+#text-site-panel-menu{
+  margin-top: 24px;
+  margin-left: 60px;
+  letter-spacing: 1px;
+  color: #FFF;
+  font-family: 'Montserrat';
+  position: absolute;
+}
 
-  #img-site-panel{
-    width: 50px;
+#close-btn{
+  margin-left: 274px;
+  margin-top: -3px;
+}
+
+#icon-close{
+  width: 18px;
+}
+
+.links-panel{
+  color: #FFF;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#facebook-panel{
+  width: 15px;
+}
+
+#twiter-panel{
+  width: 15px;
+}
+
+#heart-panel{
+  width: 15px;
+}
+
+.md-subheader.md-default-theme, .md-subheader {
+  color:#EE4353;
+  background:#000;
+}
+md-sidenav.md-default-theme, md-sidenav, md-sidenav.md-default-theme md-content, md-sidenav md-content {
+  background:#000;
+}
+
+/*  STYLES ONLY FOR MODAL AND GRAPHICS*/
+
+md-dialog md-dialog-content {
+  background-color: #292929;
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+  background-color:#EE4656;
+  color: rgba(255,255,255,0.87);
+}
+
+#content-score .dep{
+  color:#EE4656;
+  font-weight: bold;
+}
+
+#content-score .sen{
+  color:#FFF;
+  font-weight: bold;
+}
+
+@keyframes animationParty {
+  from {  max-width: 10%;
+}
+  to { max-width: 100%;}
+}
+
+#content-bars-score {
+  text-align: center;
+  max-width: 100%;
+  animation-name: animationParty;
+  animation-duration: 4s;
+}
+
+ .content-deputy{
+  background: #EE4556;
+  color: #FFF;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+.content-senator{
+  background: #FFF;
+  color: #EE4556;
+  padding-top: 5px;
+  height: 30px;
+  margin-top: 12px;
+  border-radius: 2px;
+}
+
+.content-guide-name{
+  color:#FFF;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+#content-imgs-state-score img {
+    max-width: 100%;
+    height: 40px;
     margin-top: 4px;
-    position: absolute;
-    margin-left: 7px;
-  }
+}
 
-  #text-site-panel-menu{
-    margin-top: 24px;
-    margin-left: 60px;
-    letter-spacing: 1px;
-    color: #FFF;
-    font-family: 'Montserrat';
-    position: absolute;
-  }
-
-  #close-btn{
-    margin-left: 274px;
-    margin-top: -3px;
-  }
-
-  #icon-close{
-    width: 18px;
-  }
-
-  .links-panel{
-    color: #FFF;
-    font-size: 12px;
-    text-decoration: none;
-  }
-
-  #facebook-panel{
-    width: 15px;
-  }
-
-  #twiter-panel{
-    width: 15px;
-  }
-
-  #heart-panel{
-    width: 15px;
-  }
-
-  .md-subheader.md-default-theme, .md-subheader {
-      color:#EE4353;
-      background:#000;
-  }
-  md-sidenav.md-default-theme, md-sidenav, md-sidenav.md-default-theme md-content, md-sidenav md-content {
-      background:#000;
-  }
-
-
+/*  */
 @media only screen and (max-width: 768px) {
   #img-site-panel {
     margin-top: -3px;
   }
 }
-
 @media only screen and (max-width: 736px) {
   #img-site-panel{
     margin-top: -2px;
@@ -158,6 +220,4 @@ html, body{  font-family: 'Montserrat'; text-decoration: none;}
   #close-btn {
     margin-left: 218px;
   }
-
-
 }

@@ -2,7 +2,7 @@
 <md-dialog aria-label="party" style="width:100%;" ng-cloak>
     <md-toolbar>
       <div id="toolbar-score-state"  class="md-toolbar-tools">
-        <span class="title-score-state">Borde Score</span>
+        <span class="title-score-state">Score por partido politico</span>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon md-svg-src="imgs/svg/close.svg" aria-label="Close dialog"></md-icon>
@@ -10,289 +10,7 @@
       </div>
     </md-toolbar>
     <md-dialog-content>
-    <div id="content-score-state" class="md-dialog-content">
-      <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-        <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
-          SCORE POR GÉNERO
-        </div>
-      </div>
-      <div id="content-row-menu" style="text-align:center;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-        <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-        </div>
-        <div flex-xs="70" flex-sm="70" flex-md="70" flex-lg="70"  flex-xl="70">
-          <div id="content-row-menu" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50">
-              <span class="dep">Diputados</span>
-            </div>
-            <div flex-xs="50" flex-sm="50" flex-md="10" flex-lg="50" flex-xl="50">
-              <span class="sen">Senadores</span>
-            </div>
-          </div>
-        </div>
-        <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-        </div>
-       </div>
-       <div hide-xs layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div  flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-         </div>
-         <div  flex-xs="75" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-              10
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               20
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               30
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               40
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               50
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               60
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               70
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               80
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               90
-             </div>
-             <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               100
-             </div>
-           </div>
-         </div>
-         <div  flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-         </div>
-       </div>
-       <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-         </div>
-         <div flex-xs="75" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
-               Femenino
-             </div>
-           </div>
-         </div>
-         <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-         </div>
-       </div>
-       <div id="content-row-state-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div style="text-align:center;" id="content-imgs-state-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-           <img src="imgs/svg/icn-wom.png" class="md-avatar test-tooltip" alt="{{item.who}}">
-           <md-tooltip md-direction="top">Femenino</md-tooltip>
-         </div>
-         <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div class="content-a" flex-xs="60" flex-sm="60" flex-md="60" flex-lg="60" flex-xl="60" >
-             </div>
-             <div class="content-b"  flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
-             </div>
-           </div>
-         </div>
-         <div id="content-res-state-score" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-         </div>
-       </div>
-       <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-         </div>
-         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
-               Masculino
-             </div>
-           </div>
-         </div>
-         <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-         </div>
-       </div>
-       <div id="content-row-state-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div style="text-align:center;" id="content-imgs-state-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-           <img src="imgs/svg/icn-man.png" class="md-avatar test-tooltip" alt="{{item.who}}">
-           <md-tooltip md-direction="top">Masculino</md-tooltip>
-         </div>
-         <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div class="content-a" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
-             </div>
-             <div class="content-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
-             </div>
-             <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-             </div>
-           </div>
-         </div>
-         <div style="text-align:center;" id="content-res-state-score" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-         </div>
-       </div>
-     </div>
-     <div id="content-score-state" class="md-dialog-content">
-       <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
-           SCORE POR EDAD
-         </div>
-       </div>
-       <div id="content-row-menu" style="text-align:center;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-         <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-         </div>
-         <div flex-xs="70" flex-sm="70" flex-md="70" flex-lg="70"  flex-xl="70">
-           <div id="content-row-menu" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-             <div flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50">
-               <span class="dep">Diputados</span>
-             </div>
-             <div flex-xs="50" flex-sm="50" flex-md="10" flex-lg="50" flex-xl="50">
-               <span class="sen">Senadores</span>
-             </div>
-           </div>
-         </div>
-         <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-         </div>
-        </div>
-        <div hide-xs layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div  flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-          </div>
-          <div  flex-xs="75" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-               10
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                20
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                30
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                40
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                50
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                60
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                70
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                80
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                90
-              </div>
-              <div class="content-guide-name" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-                100
-              </div>
-            </div>
-          </div>
-          <div  flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-        <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-          </div>
-          <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
-                24 +
-              </div>
-            </div>
-          </div>
-          <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-        <div id="content-row-state-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div style="text-align:center;" id="content-imgs-state-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/icn-agesmall.png" class="md-avatar test-tooltip" alt="{{item.who}}">
-            <!-- <md-tooltip md-direction="top">Zacatecas</md-tooltip> -->
-          </div>
-          <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-a" flex-xs="60" flex-sm="60" flex-md="60" flex-lg="60" flex-xl="60" >
-              </div>
-              <div class="content-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
-              </div>
-            </div>
-          </div>
-          <div style="text-align:center;" id="content-res-state-score" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-        <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-          </div>
-          <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
-                44 +
-              </div>
-            </div>
-          </div>
-          <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-        <div id="content-row-state-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div style="text-align:center;" id="content-imgs-state-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/icn-agemed.png" class="md-avatar test-tooltip" alt="{{item.who}}">
-            <!-- <md-tooltip md-direction="top">Querétaro</md-tooltip> -->
-          </div>
-          <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-a" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55" >
-              </div>
-              <div class="content-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
-              </div>
-              <div flex-xs="5" flex-sm="5" flex-md="5" flex-lg="5" flex-xl="5" >
-              </div>
-            </div>
-          </div>
-          <div style="text-align:center;" id="content-res-state-score" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-        <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-          </div>
-          <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
-                64 +
-              </div>
-            </div>
-          </div>
-          <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-        <div id="content-row-state-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-          <div style="text-align:center;" id="content-imgs-state-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/icn-ageold.png" class="md-avatar test-tooltip" alt="{{item.who}}">
-            <!-- <md-tooltip md-direction="top">Querétaro</md-tooltip> -->
-          </div>
-          <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
-            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-              <div class="content-a" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
-              </div>
-              <div class="content-b" flex-xs="60" flex-sm="60" flex-md="60" flex-lg="60" flex-xl="60" >
-              </div>
-              <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
-              </div>
-            </div>
-          </div>
-          <div style="text-align:center;" id="content-res-state-score" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
-          </div>
-        </div>
-      </div>
-    <div id="content-score-state" class="md-dialog-content">
-      <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-        <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
-          SCORE POR ESTADO
-        </div>
-      </div>
+    <div id="content-score" class="md-dialog-content">
       <div id="content-row-menu" style="text-align:center;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
         <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
         </div>
@@ -367,11 +85,11 @@
           <img src="imgs/svg/states/nayarit.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Nayarit</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
+            <div class="content-deputy" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
-            <div class="content-state-b" flex-xs="60" flex-sm="60" flex-md="60" flex-lg="60" flex-xl="60" >
+            <div class="content-senator" flex-xs="60" flex-sm="60" flex-md="60" flex-lg="60" flex-xl="60" >
             </div>
           </div>
         </div>
@@ -396,11 +114,11 @@
           <img src="imgs/svg/states/nl.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Nuevo León</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
+            <div class="content-deputy" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="5" flex-sm="5" flex-md="5" flex-lg="5" flex-xl="5" >
             </div>
@@ -427,11 +145,11 @@
           <img src="imgs/svg/states/agc.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Aguascalientes</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
+            <div class="content-deputy" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
-            <div class="content-state-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
+            <div class="content-senator" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
             <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
             </div>
@@ -458,11 +176,11 @@
           <img src="imgs/svg/states/bcs.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Baja California Sur</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" flex >
+            <div class="content-deputy" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" flex >
             </div>
-            <div class="content-state-b" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" flex >
+            <div class="content-senator" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" flex >
             </div>
             <div  flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" flex >
             </div>
@@ -489,11 +207,11 @@
           <img src="imgs/svg/states/yucatan.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Yucatán</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" flex >
+            <div class="content-deputy" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" flex >
             </div>
-            <div class="content-state-b" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" flex >
+            <div class="content-senator" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" flex >
             </div>
             <div  flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" flex >
             </div>
@@ -520,11 +238,11 @@
           <img src="imgs/svg/states/jalisco.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Jalisco</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" flex>
+            <div class="content-deputy" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" flex>
             </div>
-            <div class="content-state-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" flex>
+            <div class="content-senator" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" flex>
             </div>
             <div flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" flex>
             </div>
@@ -551,11 +269,11 @@
           <img src="imgs/svg/states/tlaxcala.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Tlaxcala</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
+            <div class="content-deputy" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
-            <div class="content-state-b" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
+            <div class="content-senator" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
             <div flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" flex>
             </div>
@@ -582,11 +300,11 @@
           <img src="imgs/svg/states/sonora.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Sonora</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
+            <div class="content-deputy" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" flex>
             </div>
@@ -613,11 +331,11 @@
           <img src="imgs/svg/states/guerrero.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Guerrero</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" flex >
+            <div class="content-deputy" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" flex >
             </div>
-            <div class="content-state-b" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
+            <div class="content-senator" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
             <div flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" flex>
             </div>
@@ -644,11 +362,11 @@
           <img src="imgs/svg/states/morelos.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Morelos</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
+            <div class="content-deputy" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" flex>
             </div>
@@ -675,11 +393,11 @@
           <img src="imgs/svg/states/df.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">CDMX</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
+            <div class="content-deputy" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
-            <div class="content-state-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
+            <div class="content-senator" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
             <div flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" flex>
             </div>
@@ -706,11 +424,11 @@
           <img src="imgs/svg/states/sinaloa.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Sinaloa</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
+            <div class="content-deputy" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
-            <div class="content-state-b" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
+            <div class="content-senator" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
             <div flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" flex>
             </div>
@@ -737,11 +455,11 @@
           <img src="imgs/svg/states/slp.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">San Luis Potosí</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
+            <div class="content-deputy" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
             </div>
-            <div class="content-state-b" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55" >
+            <div class="content-senator" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55" >
             </div>
             <div flex-xs="30" flex-sm="20" flex-md="30" flex-lg="30" flex-xl="30" flex>
             </div>
@@ -768,11 +486,11 @@
           <img src="imgs/svg/states/chiapas.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Chiapas</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55" >
+            <div class="content-deputy" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55" >
             </div>
-            <div class="content-state-b" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
+            <div class="content-senator" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
             </div>
             <div flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" flex>
             </div>
@@ -799,11 +517,11 @@
           <img src="imgs/svg/states/bc.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Baja California</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-deputy" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
-            <div class="content-state-b" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
+            <div class="content-senator" flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
             <div flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
@@ -830,11 +548,11 @@
           <img src="imgs/svg/states/qr.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Quintana Roo</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-deputy" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
@@ -861,11 +579,11 @@
           <img src="imgs/svg/states/zacatecas.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Zacatecas</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25">
+            <div class="content-deputy" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25">
             </div>
-            <div class="content-state-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40">
+            <div class="content-senator" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40">
             </div>
             <div flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
@@ -892,11 +610,11 @@
           <img src="imgs/svg/states/queretaro.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Querétaro</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-deputy" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
@@ -923,11 +641,11 @@
           <img src="imgs/svg/states/michoacan.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Michoacán</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-deputy" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
-            <div class="content-state-b" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-senator" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
             <div flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
@@ -954,11 +672,11 @@
           <img src="imgs/svg/states/colima.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Colima</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
+            <div class="content-deputy" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
-            <div class="content-state-b" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
+            <div class="content-senator" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
             </div>
             <div flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
@@ -985,11 +703,11 @@
           <img src="imgs/svg/states/tamaulipas.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Tamaulipas</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-deputy" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
-            <div class="content-state-b" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
+            <div class="content-senator" flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
             <div flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
@@ -1016,11 +734,11 @@
           <img src="imgs/svg/states/veracruz.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Veracruz</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
+            <div class="content-deputy" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
@@ -1047,11 +765,11 @@
           <img src="imgs/svg/states/guanajuato.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Guanajuato</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45">
+            <div class="content-deputy" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45">
             </div>
-            <div class="content-state-b" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
+            <div class="content-senator" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
             </div>
             <div flex-xs="40" flex-sm="40" flex-md="40" flex-lg="40" flex-xl="40" >
             </div>
@@ -1078,11 +796,11 @@
           <img src="imgs/svg/states/chihuahua.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Chihuahua</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-deputy" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
-            <div class="content-state-b" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
+            <div class="content-senator" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
             <div flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
@@ -1109,11 +827,11 @@
           <img src="imgs/svg/states/campeche.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Campeche</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
+            <div class="content-deputy" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
-            <div class="content-state-b" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-senator" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
             <div flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
@@ -1140,11 +858,11 @@
           <img src="imgs/svg/states/tabasco.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Tabasco</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
+            <div class="content-deputy" flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10" >
             </div>
-            <div class="content-state-b" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
+            <div class="content-senator" flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
             <div flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
@@ -1171,11 +889,11 @@
           <img src="imgs/svg/states/puebla.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Puebla</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
+            <div class="content-deputy" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
             </div>
-            <div class="content-state-b" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
+            <div class="content-senator" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
             <div flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
@@ -1202,11 +920,11 @@
           <img src="imgs/svg/states/coahuila.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Coahuila</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
+            <div class="content-deputy" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
-            <div class="content-state-b" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-senator" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
             <div flex-xs="45" flex-sm="45" flex-md="45" flex-lg="45" flex-xl="45" >
             </div>
@@ -1233,11 +951,11 @@
           <img src="imgs/svg/states/durango.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Durango</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
+            <div class="content-deputy" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
             </div>
-            <div class="content-state-b" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
+            <div class="content-senator" flex-xs="35" flex-sm="35" flex-md="35" flex-lg="35" flex-xl="35" >
             </div>
             <div  flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
@@ -1264,11 +982,11 @@
           <img src="imgs/svg/states/cdmx.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">México</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-deputy" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
-            <div class="content-state-b" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
+            <div class="content-senator" flex-xs="30" flex-sm="30" flex-md="30" flex-lg="30" flex-xl="30" >
             </div>
             <div  flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50" >
             </div>
@@ -1295,11 +1013,11 @@
           <img src="imgs/svg/states/oaxaca.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Oaxaca</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
+            <div class="content-deputy" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
             </div>
-            <div class="content-state-b" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
+            <div class="content-senator" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20" >
             </div>
             <div  flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55" >
             </div>
@@ -1326,11 +1044,11 @@
           <img src="imgs/svg/states/hidalgo.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
           <md-tooltip md-direction="top">Hidalgo</md-tooltip>
         </div>
-        <div id="content-bars-state-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
+        <div id="content-bars-score" flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-a" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
+            <div class="content-deputy" flex-xs="25" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25" >
             </div>
-            <div class="content-state-b" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
+            <div class="content-senator" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15" >
             </div>
             <div  flex-xs="60" flex-sm="60" flex-md="60" flex-lg="60" flex-xl="60" >
             </div>
