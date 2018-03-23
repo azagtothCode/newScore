@@ -1,8 +1,7 @@
-
-<md-dialog aria-label="party" style="width:100%;" ng-cloak>
+<md-dialog hide-xs aria-label="party" style="width:100%;" ng-cloak>
     <md-toolbar>
       <div id="toolbar-score-state"  class="md-toolbar-tools">
-        <span class="title-score-state">Score por partido politico</span>
+        <span class="title-score-state">Borde Score</span>
         <span flex></span>
         <md-button class="md-icon-button" ng-click="cancel()">
           <md-icon md-svg-src="imgs/svg/close.svg" aria-label="Close dialog"></md-icon>
@@ -11,6 +10,11 @@
     </md-toolbar>
     <md-dialog-content>
     <div id="content-score" class="md-dialog-content">
+      <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+        <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
+          SCORE POR ESTADO
+        </div>
+      </div>
       <div id="content-row-menu" style="text-align:center;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
         <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
         </div>
@@ -72,7 +76,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Nayarit
             </div>
           </div>
@@ -101,7 +105,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Nuevo León
             </div>
           </div>
@@ -132,7 +136,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Aguascalientes
             </div>
           </div>
@@ -163,7 +167,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Baja California Sur
             </div>
           </div>
@@ -194,7 +198,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Yucatán
             </div>
           </div>
@@ -225,7 +229,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Jalisco
             </div>
           </div>
@@ -256,7 +260,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Tlaxcala
             </div>
           </div>
@@ -287,7 +291,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Sonora
             </div>
           </div>
@@ -318,7 +322,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Guerrero
             </div>
           </div>
@@ -349,7 +353,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Morelos
             </div>
           </div>
@@ -380,7 +384,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               CDMX
             </div>
           </div>
@@ -411,7 +415,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Sinaloa
             </div>
           </div>
@@ -442,7 +446,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               San Luis Potosí
             </div>
           </div>
@@ -473,7 +477,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Chiapas
             </div>
           </div>
@@ -504,7 +508,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Baja California
             </div>
           </div>
@@ -535,7 +539,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Quintana Roo
             </div>
           </div>
@@ -566,7 +570,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Zacatecas
             </div>
           </div>
@@ -597,7 +601,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Querétaro
             </div>
           </div>
@@ -628,7 +632,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Michoacán
             </div>
           </div>
@@ -659,7 +663,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Colima
             </div>
           </div>
@@ -690,7 +694,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Tamaulipas
             </div>
           </div>
@@ -721,7 +725,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Veracruz
             </div>
           </div>
@@ -752,7 +756,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Guanajuato
             </div>
           </div>
@@ -783,7 +787,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Chihuahua
             </div>
           </div>
@@ -814,7 +818,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Campeche
             </div>
           </div>
@@ -845,7 +849,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Tabasco
             </div>
           </div>
@@ -876,7 +880,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Puebla
             </div>
           </div>
@@ -907,7 +911,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Coahuila
             </div>
           </div>
@@ -938,7 +942,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Durango
             </div>
           </div>
@@ -969,7 +973,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               México
             </div>
           </div>
@@ -1000,7 +1004,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Oaxaca
             </div>
           </div>
@@ -1031,7 +1035,7 @@
         </div>
         <div flex-xs="65" flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-            <div class="content-state-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+            <div class="content-name" flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
               Hidalgo
             </div>
           </div>

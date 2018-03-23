@@ -1,0 +1,1497 @@
+<md-dialog hide show-xs aria-label="party" style="width:100%;" ng-cloak>
+    <md-toolbar>
+      <div id="toolbar-score-state"  class="md-toolbar-tools">
+        <span class="title-score-state">Borde Score</span>
+        <span flex></span>
+        <md-button class="md-icon-button" ng-click="cancel()">
+          <md-icon md-svg-src="imgs/svg/close.svg" aria-label="Close dialog"></md-icon>
+        </md-button>
+      </div>
+    </md-toolbar>
+    <md-dialog-content>
+      <div id="content-score" class="md-dialog-content">
+        <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" >
+          <div flex-xs="100" >
+            SCORE POR PARTIDO POLITICO
+          </div>
+        </div>
+        <div id="content-row-menu" style="text-align:center;" layout-xs="row" >
+          <div flex-xs="5" >
+          </div>
+          <div flex-xs="90" >
+            <div id="content-row-menu" layout-xs="row" >
+              <div flex-xs="50" >
+                <span class="dep">Diputados</span>
+              </div>
+              <div flex-xs="50" >
+                <span class="sen">Senadores</span>
+              </div>
+            </div>
+          </div>
+          <div flex-xs="5" >
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img  src="imgs/svg/partys/pt.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div id="content-bars-score" flex-xs="80" >
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="100" >
+              </div>
+              <div class="content-senator" flex-xs="0">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/panal.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div id="content-bars-score" flex-xs="80" >
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="30">
+              </div>
+              <div class="content-senator" flex-xs="70">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row">
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/prd.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score" flex-xs="80" >
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="60" >
+              </div>
+              <div class="content-senator" flex-xs="40" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pes.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score"  flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="0">
+              </div>
+              <div class="content-senator" flex-xs="100" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pan.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score" flex-xs="80" >
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="65">
+              </div>
+              <div class="content-senator" flex-xs="35" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pvem.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="70">
+              </div>
+              <div class="content-senator" flex-xs="30">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/morena.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="0">
+              </div>
+              <div class="content-senator" flex-xs="100" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/pri.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="70">
+              </div>
+              <div class="content-senator" flex-xs="30">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="content-row-party-score" layout-xs="row" >
+          <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="20" >
+            <img src="imgs/svg/partys/sin partido.svg" class="md-avatar" alt="{{item.who}}">
+          </div>
+          <div  id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="45">
+              </div>
+              <div class="content-senator" flex-xs="5">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content-score" class="md-dialog-content">
+         <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" >
+           <div flex-xs="100" >
+             SCORE POR ESTADO
+           </div>
+         </div>
+         <div id="content-row-menu" style="text-align:center;" layout-xs="row" >
+           <div flex-xs="5" >
+           </div>
+           <div flex-xs="90" >
+             <div id="content-row-menu" layout-xs="row" >
+               <div flex-xs="50" >
+                 <span class="dep">Diputados</span>
+               </div>
+               <div flex-xs="50" >
+                 <span class="sen">Senadores</span>
+               </div>
+             </div>
+           </div>
+           <div flex-xs="5" >
+           </div>
+         </div>
+         <div layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Nayarit
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/nayarit.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Nayarit</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="40">
+               </div>
+               <div class="content-senator" flex-xs="60">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Nuevo León
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/nl.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Nuevo León</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="50">
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="5" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Aguascalientes
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/agc.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Aguascalientes</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="50">
+               </div>
+               <div class="content-senator" flex-xs="40">
+               </div>
+               <div flex-xs="10" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Baja California Sur
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/bcs.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Baja California Sur</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="50" >
+               </div>
+               <div class="content-senator" flex-xs="35" >
+               </div>
+               <div  flex-xs="20" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Yucatán
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/yucatan.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Yucatán</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="50" >
+               </div>
+               <div class="content-senator" flex-xs="35" >
+               </div>
+               <div  flex-xs="20" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Jalisco
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/jalisco.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Jalisco</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="40"  flex>
+               </div>
+               <div class="content-senator" flex-xs="40"  flex>
+               </div>
+               <div flex-xs="20"  flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Tlaxcala
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/tlaxcala.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Tlaxcala</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="50">
+               </div>
+               <div class="content-senator" flex-xs="30">
+               </div>
+               <div flex-xs="20"  flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Sonora
+               </div>
+             </div>
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/sonora.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Sonora</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="30">
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="25" flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Guerrero
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/guerrero.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Guerrero</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="25">
+               </div>
+               <div class="content-senator" flex-xs="50">
+               </div>
+               <div flex-xs="25" flex>
+               </div>
+             </div>
+           </div>
+           <div style="text-align:center;" id="content-res-state-score" flex-xs="10" >
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Morelos
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/morelos.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Morelos</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="30">
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="25" flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 CDMX
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/df.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">CDMX</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="35">
+               </div>
+               <div class="content-senator" flex-xs="40">
+               </div>
+               <div flex-xs="25" flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Sinaloa
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/sinaloa.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Sinaloa</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="40">
+               </div>
+               <div class="content-senator" flex-xs="30">
+               </div>
+               <div flex-xs="30"flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 San Luis Potosí
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/slp.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">San Luis Potosí</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="55">
+               </div>
+               <div flex-xs="30" flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Chiapas
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/chiapas.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Chiapas</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="55">
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div flex-xs="30"flex>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Baja California
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/bc.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Baja California</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="50">
+               </div>
+               <div flex-xs="30">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Quintana Roo
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/qr.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Quintana Roo</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="35">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Zacatecas
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/zacatecas.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Zacatecas</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="25">
+               </div>
+               <div class="content-senator" flex-xs="40" >
+               </div>
+               <div flex-xs="35">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Querétaro
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/queretaro.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Querétaro</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="35">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Michoacán
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/michoacan.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Michoacán</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="45">
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div flex-xs="35">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Colima
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/colima.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Colima</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="35">
+               </div>
+               <div class="content-senator" flex-xs="25" >
+               </div>
+               <div flex-xs="40">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Tamaulipas
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/tamaulipas.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Tamaulipas</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="40">
+               </div>
+               <div flex-xs="40">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Veracruz
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/veracruz.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Veracruz</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="40">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Guanajuato
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/guanajuato.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Guanajuato</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="45">
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div flex-xs="40">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Chihuahua
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/chihuahua.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Chihuahua</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="35">
+               </div>
+               <div flex-xs="45">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Campeche
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/campeche.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Campeche</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="35">
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div flex-xs="45">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Tabasco
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/tabasco.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Tabasco</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="10" >
+               </div>
+               <div class="content-senator" flex-xs="45">
+               </div>
+               <div flex-xs="45">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Puebla
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/puebla.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Puebla</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="25" >
+               </div>
+               <div class="content-senator" flex-xs="30">
+               </div>
+               <div flex-xs="45">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Coahuila
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/coahuila.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Coahuila</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="35">
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div flex-xs="45">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Durango
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/durango.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Durango</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="35">
+               </div>
+               <div  flex-xs="50">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 México
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/cdmx.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">México</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="20">
+               </div>
+               <div class="content-senator" flex-xs="30">
+               </div>
+               <div  flex-xs="50">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Oaxaca
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/oaxaca.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Oaxaca</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="25" >
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div  flex-xs="55">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Hidalgo
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/states/hidalgo.svg" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Hidalgo</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="25" >
+               </div>
+               <div class="content-senator" flex-xs="20">
+               </div>
+               <div  flex-xs="60">
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      <div id="content-score" class="md-dialog-content">
+         <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" >
+           <div flex-xs="100" >
+             SCORE POR GÉNERO
+           </div>
+         </div>
+         <div id="content-row-menu" style="text-align:center;" layout-xs="row" >
+           <div flex-xs="5" >
+           </div>
+           <div flex-xs="90" >
+             <div id="content-row-menu" layout-xs="row" >
+               <div flex-xs="50" >
+                 <span class="dep">Diputados</span>
+               </div>
+               <div flex-xs="50" >
+                 <span class="sen">Senadores</span>
+               </div>
+             </div>
+           </div>
+           <div flex-xs="5" >
+           </div>
+          </div>
+          <div layout-xs="row" >
+            <div flex-xs="20" >
+            </div>
+            <div flex-xs="75">
+              <div layout-xs="row" >
+                <div class="content-name" flex-xs="100" >
+                  Femenino
+                </div>
+              </div>
+            </div>
+            <div flex-xs="10" >
+            </div>
+          </div>
+          <div id="content-row-state-score" layout-xs="row" >
+            <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+              <img src="imgs/svg/icn-wom.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+              <md-tooltip md-direction="top">Femenino</md-tooltip>
+            </div>
+            <div id="content-bars-score" flex-xs="80">
+              <div layout-xs="row" >
+                <div class="content-deputy" flex-xs="60">
+                </div>
+                <div class="content-senator"  flex-xs="40">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div  layout-xs="row" >
+            <div flex-xs="20" >
+            </div>
+            <div flex-xs="65">
+              <div layout-xs="row" >
+                <div class="content-name" flex-xs="100" >
+                  Masculino
+                </div>
+              </div>
+            </div>
+            <div flex-xs="10" >
+            </div>
+          </div>
+          <div id="content-row-state-score" layout-xs="row" >
+            <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+              <img src="imgs/svg/icn-man.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+              <md-tooltip md-direction="top">Masculino</md-tooltip>
+            </div>
+            <div id="content-bars-score" flex-xs="80">
+              <div layout-xs="row" >
+                <div class="content-deputy" flex-xs="50">
+                </div>
+                <div class="content-senator" flex-xs="40">
+                </div>
+                <div flex-xs="10" >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      <div id="content-score" class="md-dialog-content">
+        <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" >
+          <div flex-xs="100" >
+            SCORE POR EDAD
+          </div>
+        </div>
+        <div id="content-row-menu" style="text-align:center;" layout-xs="row" >
+          <div flex-xs="5" >
+          </div>
+          <div flex-xs="90" >
+            <div id="content-row-menu" layout-xs="row" >
+              <div flex-xs="50" >
+                <span class="dep">Diputados</span>
+              </div>
+              <div flex-xs="50" >
+                <span class="sen">Senadores</span>
+              </div>
+            </div>
+          </div>
+          <div flex-xs="5" >
+          </div>
+         </div>
+         <div layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 De 24 años ó +
+               </div>
+             </div>
+           </div>
+           <div flex-xs="20" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/icn-agesmall.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="60">
+               </div>
+               <div class="content-senator" flex-xs="40">
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 De 44 años ó +
+               </div>
+             </div>
+           </div>
+           <div flex-xs="20" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/icn-agemed.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <!-- <md-tooltip md-direction="top">Querétaro</md-tooltip> -->
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="55">
+               </div>
+               <div class="content-senator" flex-xs="40">
+               </div>
+               <div flex-xs="5" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 De 64 años ó +
+               </div>
+             </div>
+           </div>
+           <div flex-xs="20">
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/icn-ageold.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="30">
+               </div>
+               <div class="content-senator" flex-xs="60">
+               </div>
+               <div flex-xs="10" >
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+      <div id="content-score" class="md-dialog-content">
+       <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" >
+         <div flex-xs="100" >
+           SCORE POR ELECCIÓN
+         </div>
+       </div>
+       <div id="content-row-menu" style="text-align:center;" layout-xs="row" >
+         <div flex-xs="5" >
+         </div>
+         <div flex-xs="90" >
+           <div id="content-row-menu" layout-xs="row" >
+             <div flex-xs="50" >
+               <span class="dep">Diputados</span>
+             </div>
+             <div flex-xs="50" >
+               <span class="sen">Senadores</span>
+             </div>
+           </div>
+         </div>
+         <div flex-xs="5" >
+         </div>
+        </div>
+        <div layout-xs="row" >
+          <div flex-xs="20" >
+          </div>
+          <div flex-xs="65">
+            <div layout-xs="row" >
+              <div class="content-name" flex-xs="100" >
+                Primera Minoria
+              </div>
+            </div>
+          </div>
+          <div flex-xs="20" >
+          </div>
+        </div>
+        <div id="content-row-state-score" layout-xs="row" >
+          <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+            <img src="imgs/svg/icn-mr.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+            <md-tooltip md-direction="top">Primera Minoria</md-tooltip>
+          </div>
+          <div id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="100" >
+              </div>
+              <div class="content-senator"  flex-xs="0" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div layout-xs="row" >
+          <div flex-xs="20" >
+          </div>
+          <div flex-xs="65">
+            <div layout-xs="row" >
+              <div class="content-name" flex-xs="100" >
+                Representación Proporcional
+              </div>
+            </div>
+          </div>
+          <div flex-xs="20" >
+          </div>
+        </div>
+        <div id="content-row-state-score" layout-xs="row" >
+          <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+            <img src="imgs/svg/icn-rp.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+            <md-tooltip md-direction="top">Representación Proporcional</md-tooltip>
+          </div>
+          <div id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="70" >
+              </div>
+              <div class="content-senator" flex-xs="20" >
+              </div>
+              <div flex-xs="10" >
+              </div>
+            </div>
+          </div>
+        </div>
+        <div  layout-xs="row" >
+          <div flex-xs="20" >
+          </div>
+          <div flex-xs="65">
+            <div layout-xs="row" >
+              <div class="content-name" flex-xs="100" >
+                Mayoria Relativa
+              </div>
+            </div>
+          </div>
+          <div flex-xs="10" >
+          </div>
+        </div>
+        <div id="content-row-state-score" layout-xs="row" >
+          <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+            <img src="imgs/svg/icn-pm.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+            <md-tooltip md-direction="top">Mayoria Relativa</md-tooltip>
+          </div>
+          <div id="content-bars-score" flex-xs="80">
+            <div layout-xs="row" >
+              <div class="content-deputy" flex-xs="60" >
+              </div>
+              <div class="content-senator" flex-xs="20" >
+              </div>
+              <div flex-xs="20" >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="content-score" class="md-dialog-content">
+        <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row">
+          <div flex-xs="100">
+            SCORE POR ALIANZAS
+          </div>
+        </div>
+        <div id="content-row-menu" style="text-align:center;" layout-xs="row">
+          <div flex-xs="5">
+          </div>
+          <div flex-xs="90">
+            <div id="content-row-menu" layout-xs="row">
+              <div flex-xs="50" >
+                <span class="dep">Diputados</span>
+              </div>
+              <div flex-xs="50" >
+                <span class="sen">Senadores</span>
+              </div>
+            </div>
+          </div>
+          <div flex-xs="5" >
+          </div>
+         </div>
+         <div layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Juntos Haremos Historia
+               </div>
+             </div>
+           </div>
+           <div flex-xs="20" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/icn-jjh.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Juntos Haremos Historia</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="40" >
+               </div>
+               <div class="content-senator" flex-xs="60" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Por México Al Frente
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/icn-pmf.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Por México Al Frente</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="40" >
+               </div>
+               <div class="content-senator" flex-xs="50" >
+               </div>
+               <div flex-xs="10" >
+               </div>
+             </div>
+           </div>
+         </div>
+         <div  layout-xs="row" >
+           <div flex-xs="20" >
+           </div>
+           <div flex-xs="65">
+             <div layout-xs="row" >
+               <div class="content-name" flex-xs="100" >
+                 Todos Por México
+               </div>
+             </div>
+           </div>
+           <div flex-xs="10" >
+           </div>
+         </div>
+         <div id="content-row-state-score" layout-xs="row" >
+           <div style="text-align:center;" id="content-imgs-state-score" flex-xs="20" >
+             <img src="imgs/svg/icn-tpm.png" class="md-avatar test-tooltip" alt="{{item.who}}">
+             <md-tooltip md-direction="top">Todos Por México</md-tooltip>
+           </div>
+           <div id="content-bars-score" flex-xs="80">
+             <div layout-xs="row" >
+               <div class="content-deputy" flex-xs="30">
+               </div>
+               <div class="content-senator" flex-xs="55">
+               </div>
+               <div flex-xs="20" >
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+    </md-dialog-content>
+
+    <md-dialog-actions layout-xs="column">
+      <div  >
+        <md-button href="http://bordepolitico.com/infografia-borde-score/" target="_blank" md-autofocus>
+          Como funciona
+        </md-button>
+      </div>
+    </md-dialog-actions>
+</md-dialog>

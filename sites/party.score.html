@@ -1,8 +1,7 @@
-
-<md-dialog aria-label="party" style="width:100%;" ng-cloak>
+<md-dialog hide-xs aria-label="party" style="width:100%;" ng-cloak>
   <md-toolbar>
     <div id="toolbar-score-party"  class="md-toolbar-tools">
-      <span class="title-score-party">Score por partido politico</span>
+      <span class="title-score-state">Borde Score</span>
       <span flex></span>
       <md-button class="md-icon-button" ng-click="cancel()">
         <md-icon md-svg-src="imgs/svg/close.svg" aria-label="Close dialog"></md-icon>
@@ -11,6 +10,11 @@
   </md-toolbar>
     <md-dialog-content>
       <div id="content-score" class="md-dialog-content" >
+        <div id="content-row-menu" style="text-align:left; background:#EE4556; color:#FFF; padding:10px; font-size:15px; margin-bottom:10px;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+          <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
+            SCORE POR PARTIDO POLITICO
+          </div>
+        </div>
         <div id="content-row-menu" style="text-align:center;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
           </div>
@@ -69,7 +73,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img  src="imgs/svg/partys/colors/pt.svg" class="md-avatar" alt="{{item.who}}">
+            <img  src="imgs/svg/partys/pt.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div id="content-bars-score" flex-xs="65"  flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -86,7 +90,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/panal.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/panal.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div id="content-bars-score" flex-xs="75" flex-sm="75" flex-md="75"  flex-lg="75"  flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -103,7 +107,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row"  layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/prd.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/prd.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score" flex-xs="75"  flex-sm="75" flex-md="75" flex-lg="75"  flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -120,7 +124,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/pes.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/pes.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score"  flex-xs="75"  flex-sm="75" flex-md="75" flex-lg="75" flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -137,7 +141,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/pan.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/pan.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score" flex-xs="75" flex-sm="75" flex-md="75" flex-lg="75" flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -154,7 +158,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/pvem.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/pvem.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score" flex-xs="75"  flex-sm="75" flex-md="75" flex-lg="75" flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -171,7 +175,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/morena.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/morena.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score" flex-xs="75"  flex-sm="75" flex-md="75" flex-lg="75" flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -188,7 +192,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/pri.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/pri.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score" flex-xs="75"  flex-sm="75" flex-md="75" flex-lg="75" flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -205,7 +209,7 @@
         </div>
         <div id="content-row-party-score" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  style="text-align:center;" id="content-imgs-party-score" flex-xs="15" flex-sm="15" flex-md="15" flex-lg="15" flex-xl="15">
-            <img src="imgs/svg/partys/colors/sin partido.svg" class="md-avatar" alt="{{item.who}}">
+            <img src="imgs/svg/partys/sin partido.svg" class="md-avatar" alt="{{item.who}}">
           </div>
           <div  id="content-bars-score" flex-xs="75"  flex-sm="75" flex-md="75" flex-lg="75" flex-xl="75">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
