@@ -37,6 +37,10 @@ md-autocomplete input:-ms-input-placeholder {
 .md-autocomplete-suggestions li:hover {
     background: gray;
 }
+
+md-backdrop.md-opaque {
+    height: 2000px;
+}
 /*SLIDE STYLES*/
 #slide-head{
   background-image: url(../../imgs/jpg/slide_head.jpg);
@@ -202,7 +206,7 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
 
   #content-dip{
     margin-top: 0px;
-    margin-left: 30px;
+    margin-left: 0px;
   }
 }
 
@@ -465,7 +469,7 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
   }
 
   #boton-borde {
-    margin-left: 0px;
+    margin-left: -3px;
   }
 
   .btn-text-one {

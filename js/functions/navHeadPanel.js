@@ -125,7 +125,7 @@ app.controller('PanelCtrl', function ($scope, $timeout, $mdSidenav, $log) {
       {
         face : imagePathReforma,
         who: 'Plataforma de Articulación Ciudadana',
-        address: 'http://reformapenal.org/'
+        address: 'http://pac.bordepolitico.com/'
       }
     ];
 

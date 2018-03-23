@@ -6,7 +6,7 @@ html, body{font-family: 'Montserrat'; text-decoration: none;}
   background: #000;
   position: fixed;
   width: 100%;
-  opacity: 0.8;
+  /* opacity: 0.8; */
   z-index: 3;
   height: auto;
 }
@@ -227,6 +227,11 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
   #icon-menu {
     width: 30px;
     margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  #icon-logo {
+    margin-left: 5px;
   }
 
   #content-imgs-party-score img {
@@ -238,7 +243,7 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
     max-width: 30px;
     margin-top: 4px;
   }
-  
+
   .content-name {
     font-size: 12px;
   }
