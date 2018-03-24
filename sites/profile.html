@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8"></meta>
   <!-- Angular Material style sheet -->
+  <link rel="stylesheet" href="../css/externs/angular-material.min.css">
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css">
   <link rel="stylesheet" href="../css/others/headNavPanel.css">
 </head>
@@ -56,21 +57,35 @@
     <!--panel section content-->
     <md-content ng-controller="RightCtrl" layout-padding="">
       <md-subheader class="md-no-sticky">Redes Sociales</md-subheader>
-      <div style="text-align:center;" ng-cloak=""  >
-        <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
-          <img id="facebook-panel" src="../imgs/svg/facebook.svg" aria-label="Facebook">
-        </md-button>
-        <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
-          <img id="twiter-panel" src="../imgs/svg/twitter.svg" aria-label="Twitter">
-        </md-button>
-        <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
-          <md-tooltip hide-xs md-direction="top">Me Gusta</md-tooltip>
-          <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
-            <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
-          </a>
-        </md-button>
+      <div style="text-align:center;" ng-cloak=""  layout-md="row" layout-gt-md="row" layout-gt-lg="row"  layout-lg="row" layout-xl="row" layout-sm="row" layout-xs="row" >
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button ng-controller="OpenFacebookController" ng-click="openFace()" ng-cloak="" aria-label="Facebook" class="md-fab md-primary md-hue-2 md-mini test-tooltip" >
+            <md-tooltip hide-xs md-direction="top">Borde Politico</md-tooltip>
+            <img id="facebook-panel" src="../imgs/svg/facebook.svg" aria-label="Facebook">
+          </md-button>
+        </div>
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button ng-controller="OpenTwitterController" ng-click="openTwit()" ng-cloak=""  aria-label="Twitter" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+            <md-tooltip hide-xs md-direction="top">@BordePolitico</md-tooltip>
+            <img id="twiter-panel" src="../imgs/svg/twitter.svg" aria-label="Twitter">
+          </md-button>
+        </div>
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+            <md-tooltip hide-xs md-direction="top">Instagram</md-tooltip>
+            <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+              <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
+            </a>
+          </md-button>
+        </div>
+        <div flex-xl="25" flex-lg="25" flex-md="25" flex-sm="25" flex-xs="25">
+          <md-button  aria-label="Liked" class="md-fab md-primary md-hue-2 md-mini test-tooltip">
+            <md-tooltip hide-xs md-direction="top">Youtube</md-tooltip>
+            <a href="https://twitter.com/share?hashtags=BordeScore%2CBordePolitico&text=<3%20Borde Score&via=appbordepolitico.com" target="_blank">
+              <img id="heart-panel" src="../imgs/svg/heart.svg" aria-label="Me gusta">
+            </a>
+          </md-button>
+        </div>
       </div>
       <md-divider ></md-divider>
       <md-subheader id="subheaderDirectorio" class="md-no-sticky">Directorio Legisladores</md-subheader>
@@ -97,7 +112,7 @@
       <md-subheader class="md-no-sticky">Otros Sitios Borde</md-subheader>
       <md-list ng-controller="PanelContentIndexController" ng-cloak flex>
         <md-list-item id="NoHover" ng-href="{{item.address}}"  target="_blank"  class="md-3-line" ng-repeat="item in linksDirectoryOtherSites" ng-click="null">
-          <img id="icon-panel" ng-src="{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
+          <img id="icon-panel" ng-src="../{{item.face}}?{{$index}}" class="md-avatar" alt="{{item.who}}" />
           <div class="md-list-item-text" layout="column">
             <span class="links-panel">{{ item.who }}</span>
           </div>
@@ -120,20 +135,24 @@
 
 
   <!-- Angular Material requires Angular.js Libraries -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
+
+  <!-- Angular Material requires Angular.js Libraries -->
+  <script src="../js/externs/angular.js" ></script>
+  <script src="../js/externs/angular-animate.min.js" ></script>
+  <script src="../js/externs/angular-aria.min.js" ></script>
+  <script src="../js/externs/angular-messages.min.js" ></script>
+  <script src="../js/externs/jquery-3.3.1.js" ></script>
 
   <!-- Angular Material Library -->
-  <script src="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
+  <script src="../js/externs/angular-material.min.js" ></script>
+  <script src="../js/externs/angular-route.js" ></script>
 
   <!-- Your application bootstrap  -->
-  <!-- <script src="js/apiCalls/legislators/callLegApi.js"></script>
-  <script src="js/functions/routes.js"></script>
-  <script src="js/functions/navHeadPanel.js"></script> -->
   <script src="../js/apiCalls/legislators/callProfileApi.js"></script>
   <script src="../js/functions/navHeadPanel.js"></script>
 

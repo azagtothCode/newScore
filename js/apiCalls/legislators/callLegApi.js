@@ -21,7 +21,7 @@ app.controller('deputyController', ['$scope', '$http', '$cacheFactory', function
       $scope.data = response.data;
       arrAll = response.data.dip; //variable save array with all legislators in the api call
       var legislstors_all = [];
-
+      $scope.filters = { };
       console.log("Connected and Work Deputys :)", legislstors_all);
 
       if(arrAll){
@@ -37,8 +37,92 @@ app.controller('deputyController', ['$scope', '$http', '$cacheFactory', function
                 val.legislator_chamber_sil="Diputada";
             }
 
-            var state = val.legislator_state_sil.trim();
-            console.log(state);
+            var state = val.legislator_state_sil;
+            var zone = val.legislator_zone_sil;
+            console.log("Estado"+ state);
+            console.log("Zona"+zone);
+
+            if(state){
+              val.legislator_state_sil = val.legislator_state_sil.trim().toLowerCase();
+              if(val.legislator_state_sil == "baja california sur"){
+                val.legislator_state_sil = "baja california s."
+              }
+
+              if(val.legislator_state_sil == "s/e"){
+                val.legislator_state_sil = "cdmx"
+              }
+              if(val.legislator_state_sil == "df"){
+                val.legislator_state_sil = "cdmx"
+              }
+              if(val.legislator_state_sil == "méxico"){
+                val.legislator_state_sil = "cdmx"
+              }
+              if(val.legislator_state_sil == "distrito federal"){
+                val.legislator_state_sil = "cdmx"
+              }
+            }
+
+            if(zone){
+              val.legislator_zone_sil = val.legislator_zone_sil.trim().toLowerCase();
+
+              if(val.legislator_zone_sil == "baja california sur"){
+                val.legislator_zone_sil = "bcs"
+              }
+
+              if(val.legislator_zone_sil == "baja california"){
+                val.legislator_zone_sil = "bc"
+              }
+
+              if(val.legislator_zone_sil == "s/e"){
+                val.legislator_zone_sil = "cdmx"
+              }
+
+              if(val.legislator_zone_sil == "df"){
+                val.legislator_zone_sil = "cdmx"
+              }
+
+              if(val.legislator_zone_sil == "m&#xe9;xico"){
+                val.legislator_zone_sil = "cdmx"
+              }
+
+              if(val.legislator_zone_sil == "distrito federal"){
+                val.legislator_zone_sil = "cdmx"
+              }
+
+              if(val.legislator_zone_sil == "michoac&#xe1;n"){
+                val.legislator_zone_sil = "michoacan"
+              }
+
+              if(val.legislator_zone_sil == "nuevo le&#xf3;n"){
+                val.legislator_zone_sil = "nl"
+              }
+
+              if(val.legislator_zone_sil == "quintana roo"){
+                val.legislator_zone_sil = "qr"
+              }
+
+              if(val.legislator_zone_sil == "yucat&#xe1;n"){
+                val.legislator_zone_sil = "yucatan"
+              }
+
+              if(val.legislator_zone_sil == "n/a"){
+                val.legislator_zone_sil = "cdmx"
+              }
+
+              if(val.legislator_zone_sil == "quer&#xe9;taro"){
+                val.legislator_zone_sil = "queretaro"
+              }
+
+              if(val.legislator_zone_sil == "aguascalientes"){
+                val.legislator_zone_sil = "agc"
+              }
+
+              if(val.legislator_zone_sil == "san luis potos&#xed;"){
+                val.legislator_zone_sil = "slp"
+              }
+            }
+
+
               if(val.legislator_election_sil == "RP" ){
                 val.legislator_election_sil = "Representación Proporcional"
               }
