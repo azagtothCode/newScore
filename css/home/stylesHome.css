@@ -1,0 +1,233 @@
+#contentCaliPac img{
+ width:100%; height:auto; cursor:pointer;
+}
+
+#nameChamber{
+ font-size: 28px; text-transform: uppercase; color: #BBB; letter-spacing:4px; cursor:pointer;
+}
+
+#nameState{
+ font-size: 23px; text-transform: uppercase; color: #BBB; letter-spacing:2px; cursor:pointer;
+}
+
+#imgState{
+ width:50px; height:50px; margin-top:10px; cursor:pointer;
+}
+
+#imgLegis{
+ border-radius:150px; width:100%; top:0px;
+}
+
+#nameLegis{
+ font-size:23px; letter-spacing:2px; color:#EE4656; cursor:pointer;
+}
+
+#lastNameLegis{
+ font-size:23px; letter-spacing:2px; color:#EE4656; cursor:pointer;
+}
+
+#nameElection{
+ padding-top:10px; font-size:20px; letter-spacing:2px; color:#BBB; cursor:pointer;
+}
+
+#nameScore{
+ font-size:20px; letter-spacing:2px; color:#EE4656; text-transform:uppercase;
+}
+
+#valueScore{
+ font-size:23px; letter-spacing:2px; color:#BBB; cursor:pointer;
+}
+
+#contentSocialIcon img{
+ width:50px; height:100%; cursor:pointer;
+}
+
+#contentPartyIcon img{
+ width:auto; height:auto; cursor:pointer;
+}
+
+.active {
+  background:#EE4656;
+}
+
+.actived {
+  background:#EE2656;
+}
+
+@media only screen and (max-width: 1919px) {
+  #nameChamber{
+   font-size: 25px;
+  }
+
+  #nameState{
+   font-size: 20px;
+  }
+
+  #imgState{
+   width:35px; height:35px;
+  }
+
+  #nameLegis{
+   font-size:20px;
+  }
+
+  #lastNameLegis{
+   font-size:20px;
+  }
+
+  #nameElection{
+   font-size:18px;
+  }
+
+  #nameScore{
+   font-size:16px;
+  }
+
+  #valueScore{
+   font-size:20px;
+  }
+
+  #contentSocialIcon img{
+   width:40px;
+  }
+
+  #contentPartyIcon img{
+    width:50px; height:50px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  #nameChamber {
+    font-size: 30px;
+  }
+
+  #nameState {
+    font-size: 25px;
+  }
+
+  #imgState {
+    width: 50px;
+    height: 50px;
+  }
+
+  #nameLegis {
+    font-size: 25px;
+  }
+
+  #lastNameLegis {
+    font-size: 25px;
+  }
+
+  #nameElection {
+    font-size: 23px;
+  }
+
+  #nameScore {
+    font-size: 21px;
+  }
+
+  #valueScore {
+    font-size: 25px;
+  }
+
+  #contentSocialIcon img {
+    width: 50px;
+  }
+
+  #contentPartyIcon img {
+    width: auto;
+    height: auto;
+  }
+
+  md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {
+    min-height: 1000px;
+  }
+}
+
+@media only screen and (max-width: 860px) {
+  #nameChamber{
+   font-size: 25px;
+  }
+
+  #nameState{
+   font-size: 20px;
+  }
+
+  #imgState{
+   width:35px; height:35px;
+  }
+
+  #nameLegis{
+   font-size:22px;
+  }
+
+  #lastNameLegis{
+   font-size:22px;
+  }
+
+  #nameElection{
+   font-size:17px;
+  }
+
+  #nameScore{
+   font-size:16px;
+  }
+
+  #valueScore{
+   font-size:18px;
+  }
+
+  #contentSocialIcon img{
+   width:40px;
+  }
+
+  #contentPartyIcon img{
+    width:50px; height:50px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  #nameChamber {
+    font-size: 20px;
+  }
+
+  #nameState {
+    font-size: 15px;
+  }
+
+  #imgState {
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+  }
+
+  #nameLegis {
+    font-size: 17px;
+  }
+
+  #lastNameLegis {
+    font-size: 17px;
+  }
+
+  #nameElection {
+    font-size: 15px;
+    padding-top: 0px;
+  }
+
+  #nameScore {
+    font-size: 10px;
+  }
+
+  #valueScore {
+    font-size: 17px;
+  }
+
+  #contentSocialIcon img {
+    width: 30px;
+  }
+
+  #contentPartyIcon img {
+    width: 40px;
+    height: 40px;
+  }
+}

@@ -1,111 +1,228 @@
 <div ng-controller="deputyController" >
   <div ng-controller="senatorController">
-      <!--  BEGIN DIV CONTENT LEGISLATORS FOR TABLET && DESKTOP-->
-      <div hide show-md show-lg show-xl layout-md="row" layout-lg="row" layout-xl="row">
-        <div flex-md="50" flex-lg="50" flex-xl="20">
-        </div>
-        <div class="contentdemoBasicUsage" flex-md="50" flex-lg="50" flex-xl="30" >
-          <md-content >
-            <div ng-repeat="deputyDates in deputysApi | filter:filters" layout-md="row" layout-lg="row" layout-xl="row">
-              <div flex-md="20" flex-lg="40" flex-xl="0">
+    <!--  BEGIN DIV CONTENT LEGISLATORS FOR TABLET && DESKTOP-->
+    <div hide show-md show-lg show-xl layout-md="row" layout-lg="row" layout-xl="row">
+      <div flex-md="5" flex-lg="15" flex-xl="20">
+      </div>
+      <div class="contentdemoBasicUsage" flex-md="45" flex-lg="35" flex-xl="30" >
+        <md-content ng-controller="classCtrl">
+          <div ng-repeat="deputyDates in deputysApi | filter:filtersDeputys" layout-md="row" layout-lg="row" layout-xl="row">
+            <div flex-md="0" flex-lg="0" flex-xl="0">
+            </div>
+            <div  flex-md="100" flex-lg="100" flex-xl="100">
+              <div layout-md="row" layout-lg="row" layout-xl="row">
+                <div flex-md="100" flex-lg="100" flex-xl="100">
+                  <div style="margin-top:30px;" layout-md="row" layout-lg="row" layout-xl="row">
+                    <div style="text-align:center;" flex-md="25" flex-lg="25" flex-xl="25">
+                      <div id="contentCaliPac" layout-md="row" layout-lg="row" layout-xl="row">
+                        <div ng-mouseover="changeImageHappy=true;" ng-mouseleave="changeImageHappy=false;" ng-init="changeImageHappy=false;" flex-md="33" flex-lg="33" flex-xl="33">
+                          <a href="http://pac.bordepolitico.com" target="_blank">
+                            <img ng-hide="changeImageHappy" src="imgs/svg/cali_happy.svg" />
+                          </a>
+                          <a href="http://pac.bordepolitico.com" target="_blank">
+                            <img ng-show="changeImageHappy" src="imgs/svg/cali_happy_color.svg" />
+                          </a>
+                        </div>
+                        <div ng-mouseover="changeImageSad=true;" ng-mouseleave="changeImageSad=false;" ng-init="changeImageSad=false;" flex-md="33" flex-lg="33" flex-xl="33">
+                          <a href="http://pac.bordepolitico.com" target="_blank">
+                            <img ng-hide="changeImageSad" src="imgs/svg/cali_sad.svg" />
+                          </a>
+                          <a href="http://pac.bordepolitico.com" target="_blank">
+                            <img ng-show="changeImageSad" src="imgs/svg/cali_sad_color.svg" />
+                          </a>
+                        </div>
+                        <div ng-mouseover="changeImageBad=true;" ng-mouseleave="changeImageBad=false;" ng-init="changeImageBad=false;" flex-md="33" flex-lg="33" flex-xl="33">
+                          <a href="http://pac.bordepolitico.com" target="_blank">
+                            <img ng-hide="changeImageBad" src="imgs/svg/cali_bad.svg" />
+                          </a>
+                          <a href="http://pac.bordepolitico.com" target="_blank">
+                            <img ng-show="changeImageBad" src="imgs/svg/cali_bad_color.svg" />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div flex-md="75" flex-lg="75" flex-xl="75">
+                      <div layout-md="row" layout-lg="row" layout-xl="row">
+                        <div style="text-align:right;" flex-md="80" flex-lg="80" flex-xl="80">
+                          <div layout-md="column" layout-lg="column" layout-xl="column">
+                            <!-- <span class="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filters.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filters.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span> -->
+                            <span id="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filtersDeputys.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filtersDeputys.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span>
+                          </div>
+                          <div layout-md="column" layout-lg="column" layout-xl="column">
+                            <span id="nameState" ng-click="filtersDeputys.legislator_state_sil = deputyDates.legislator_state_sil" ng-dblclick="filtersDeputys.legislator_state_sil = ''; ">{{deputyDates.legislator_state_sil}}</span>
+                          </div>
+                        </div>
+                        <div  ng-mouseover="changeImageState=true;" ng-mouseleave="changeImageState=false;" ng-init="changeImageState=false;" style="text-align:center;" flex-md="20" flex-lg="20" flex-xl="20">
+                          <img id="imgState" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-hide="changeImageState" src="imgs/svg/states/{{deputyDates.legislator_zone_sil}}.svg" />
+                          <img id="imgState" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-show="changeImageState" src="imgs/svg/states/colors/{{deputyDates.legislator_zone_sil}}.svg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div layout-md="row" layout-lg="row" layout-xl="row">
+                    <div  flex-md="25" flex-lg="25" flex-xl="25">
+                      <a href="sites/profile.html?id={{deputyDates.id_legislator_sil}}" target="_blank">
+                        <img id="imgLegis" ng-src="imgs/png/legisladores/{{deputyDates.id_photo_sil}}.png" >
+                      </a>
+                    </div>
+                    <div flex-offset-md="5" flex-md="70" flex-offset-lg="5"  flex-lg="70"  flex-offset-xl="5"  flex-xl="70">
+                      <div layout-md="column" layout-lg="column" layout-xl="column">
+                        <span id="nameLegis">{{deputyDates.legislator_first_name_sil}}</span>
+                      </div>
+                      <div layout-md="column" layout-lg="column" layout-xl="column">
+                        <span id="lastNameLegis">{{deputyDates.legislator_last_name_sil}}</span>
+                      </div>
+                      <div layout-md="column" layout-lg="column" layout-xl="column">
+                        <span id="nameElection" ng-click="filtersDeputys.legislator_election_sil = deputyDates.legislator_election_sil" ng-dblclick="filtersDeputys.legislator_election_sil = ''; ">{{deputyDates.legislator_election_sil}}</span>
+                      </div>
+                      <div layout-md="column" layout-lg="column" layout-xl="column">
+                        <div style="padding-top:10px;" layout-md="row" layout-lg="row" layout-xl="row">
+                           <div style="text-align:left;" flex-md="20" flex-lg="20" flex-xl="20">
+                              <div layout-md="column" layout-lg="column" layout-xl="column">
+                                <span id="nameScore">score</span>
+                              </div>
+                              <div layout-md="column" layout-lg="column" layout-xl="column">
+                                <span id="valueScore" ng-click="filtersDeputys.legislator_score_sil = deputyDates.legislator_score_sil" ng-dblclick="filtersDeputys.legislator_score_sil = ''; " >{{deputyDates.legislator_score_sil}}</span>
+                              </div>
+                           </div>
+                           <div style="text-align:center;" flex-md="55" flex-lg="55" flex-xl="55">
+                             <div id="contentSocialIcon" layout-md="row" layout-lg="row" layout-xl="row">
+                                <div  flex-md="33" flex-lg="33" flex-xl="33" style="display:{{classFacebook}}">
+                                  <a target="_blank" href="https://www.facebook.com/{{deputyDates.legislator_facebook_sil}}">
+                                   <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                                  </a>
+                                </div>
+                                <div style="display:{{classTwitter}};" flex-md="33" flex-lg="33" flex-xl="33">
+                                  <a href="https://twitter.com/{{deputyDates.legislator_twitter_senate}}" target="_blank">
+                                   <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
+                                  </a>
+                                </div>
+                                <div  style="display:{{classMail}};" flex-md="33" flex-lg="33" flex-xl="33">
+                                  <a href="mailto:{{deputyDates.legislator_mail_sil}}">
+                                   <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                            <div id="contentPartyIcon" style="text-align:center;" ng-mouseover="changeImage=true;" ng-mouseleave="changeImage=false;" ng-init="changeImage=false;" flex-md="25" flex-lg="25" flex-xl="25">
+                              <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-hide="changeImage" src="imgs/svg/partys/{{deputyDates.legislator_party_sil}}.svg" />
+                              <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-show="changeImage" src="imgs/svg/partys/colors/{{deputyDates.legislator_party_sil}}.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <md-divider style="margin-bottom:5px;" md-inset="" ng-if="!$last"></md-divider>
               </div>
-              <div  flex-md="80" flex-lg="60" flex-xl="100">
+            </div>
+         </md-content>
+        </div>
+        <!--SENADORES CONTENT -->
+        <div  class="contentdemoBasicUsage" flex-md="45" flex-lg="35" flex-xl="30">
+          <md-content ng-controller="classCtrl">
+            <div ng-repeat="senatorDates in senatorsApi | filter:filtersSenators" layout-md="row" layout-lg="row" layout-xl="row">
+              <div flex-md="0" flex-lg="0" flex-xl="0">
+              </div>
+              <div  flex-md="100" flex-lg="100" flex-xl="100">
                 <div layout-md="row" layout-lg="row" layout-xl="row">
-                  <div flex-md="40" flex-lg="40" flex-xl="100">
+                  <div flex-md="100" flex-lg="100" flex-xl="100">
                     <div style="margin-top:30px;" layout-md="row" layout-lg="row" layout-xl="row">
-                      <div style="text-align:center;" flex-md="40" flex-lg="40" flex-xl="25">
-                        <div layout-md="row" layout-lg="row" layout-xl="row">
+                      <div style="text-align:center;" flex-md="25" flex-lg="25" flex-xl="25">
+                        <div id="contentCaliPac" layout-md="row" layout-lg="row" layout-xl="row">
                           <div ng-mouseover="changeImageHappy=true;" ng-mouseleave="changeImageHappy=false;" ng-init="changeImageHappy=false;" flex-md="33" flex-lg="33" flex-xl="33">
                             <a href="http://pac.bordepolitico.com" target="_blank">
-                              <img style="width:100%; height:auto; cursor:pointer;" ng-hide="changeImageHappy" src="imgs/svg/cali_happy.svg" />
+                              <img ng-hide="changeImageHappy" src="imgs/svg/cali_happy.svg" />
                             </a>
                             <a href="http://pac.bordepolitico.com" target="_blank">
-                              <img style="width:100%; height:auto; cursor:pointer;" ng-show="changeImageHappy" src="imgs/svg/cali_happy_color.svg" />
+                              <img ng-show="changeImageHappy" src="imgs/svg/cali_happy_color.svg" />
                             </a>
                           </div>
                           <div ng-mouseover="changeImageSad=true;" ng-mouseleave="changeImageSad=false;" ng-init="changeImageSad=false;" flex-md="33" flex-lg="33" flex-xl="33">
                             <a href="http://pac.bordepolitico.com" target="_blank">
-                              <img style="width:100%; height:auto; cursor:pointer;" ng-hide="changeImageSad" src="imgs/svg/cali_sad.svg" />
+                              <img ng-hide="changeImageSad" src="imgs/svg/cali_sad.svg" />
                             </a>
                             <a href="http://pac.bordepolitico.com" target="_blank">
-                              <img style="width:100%; height:auto; cursor:pointer;" ng-show="changeImageSad" src="imgs/svg/cali_sad_color.svg" />
+                              <img ng-show="changeImageSad" src="imgs/svg/cali_sad_color.svg" />
                             </a>
                           </div>
                           <div ng-mouseover="changeImageBad=true;" ng-mouseleave="changeImageBad=false;" ng-init="changeImageBad=false;" flex-md="33" flex-lg="33" flex-xl="33">
                             <a href="http://pac.bordepolitico.com" target="_blank">
-                              <img style="width:100%; height:auto; cursor:pointer;" ng-hide="changeImageBad" src="imgs/svg/cali_bad.svg" />
+                              <img ng-hide="changeImageBad" src="imgs/svg/cali_bad.svg" />
                             </a>
                             <a href="http://pac.bordepolitico.com" target="_blank">
-                              <img style="width:100%; height:auto; cursor:pointer;" ng-show="changeImageBad" src="imgs/svg/cali_bad_color.svg" />
+                              <img ng-show="changeImageBad" src="imgs/svg/cali_bad_color.svg" />
                             </a>
                           </div>
                         </div>
                       </div>
-                      <div flex-offset-md="5" flex-md="55" flex-lg="60" flex-offset-xl="5" flex-xl="75">
+                      <div flex-md="75" flex-lg="75" flex-xl="75">
                         <div layout-md="row" layout-lg="row" layout-xl="row">
                           <div style="text-align:right;" flex-md="80" flex-lg="80" flex-xl="80">
                             <div layout-md="column" layout-lg="column" layout-xl="column">
-                              <span ng-click="filters.legislator_chamber_sil = deputyDates.legislator_chamber_sil" ng-dblclick="filters.legislator_chamber_sil = '' " style="font-size: 30px; text-transform: uppercase; color: #BBB; letter-spacing:4px; cursor:pointer;">{{deputyDates.legislator_chamber_sil}}</span>
+                              <!-- <span class="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filters.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filters.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span> -->
+                              <span id="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filtersSenators.legislator_chamber_sil = senatorDates.legislator_chamber_sil; activeButton();" ng-dblclick="filtersSenators.legislator_chamber_sil = ''; activeButtonDouble();">{{senatorDates.legislator_chamber_sil}}</span>
                             </div>
                             <div layout-md="column" layout-lg="column" layout-xl="column">
-                              <span ng-click="filters.legislator_state_sil = deputyDates.legislator_state_sil" ng-dblclick="filters.legislator_state_sil = '' " style="font-size: 25px; text-transform: uppercase; color: #BBB;  letter-spacing:2px; cursor:pointer;">{{deputyDates.legislator_state_sil}}</span>
+                              <span id="nameState" ng-click="filtersSenators.legislator_state_sil = senatorDates.legislator_state_sil" ng-dblclick="filtersSenators.legislator_state_sil = ''; ">{{senatorDates.legislator_state_sil}}</span>
                             </div>
                           </div>
                           <div  ng-mouseover="changeImageState=true;" ng-mouseleave="changeImageState=false;" ng-init="changeImageState=false;" style="text-align:center;" flex-md="20" flex-lg="20" flex-xl="20">
-                            <img ng-click="filters.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filters.legislator_zone_sil = '' "  style="width:50px; height:50px; margin-top:10px; cursor:pointer;" ng-hide="changeImageState" src="imgs/svg/states/{{deputyDates.legislator_zone_sil}}.svg" />
-                            <img ng-click="filters.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filters.legislator_zone_sil = '' "  style="width:50px; height:50px; margin-top:10px; cursor:pointer;" ng-show="changeImageState" src="imgs/svg/states/colors/{{deputyDates.legislator_zone_sil}}.svg" />
+                            <img id="imgState" ng-click="filtersSenators.legislator_zone_sil = senatorDates.legislator_zone_sil" ng-dblclick="filtersSenators.legislator_zone_sil = ''; "  ng-hide="changeImageState" src="imgs/svg/states/{{senatorDates.legislator_zone_sil}}.svg" />
+                            <img id="imgState" ng-click="filtersSenators.legislator_zone_sil = senatorDates.legislator_zone_sil" ng-dblclick="filtersSenators.legislator_zone_sil = ''; "  ng-show="changeImageState" src="imgs/svg/states/colors/{{senatorDates.legislator_zone_sil}}.svg" />
                           </div>
                         </div>
                       </div>
                     </div>
                     <div layout-md="row" layout-lg="row" layout-xl="row">
-                      <div  flex-md="40" flex-lg="40" flex-xl="25">
-                        <a href="sites/profile.html?id={{deputyDates.id_legislator_sil}}" target="_blank">
-                          <img  style="border-radius:150px; width:100%; top:0px;" ng-src="imgs/png/legisladores/{{deputyDates.id_legislator_sil}}.png" >
+                      <div  flex-md="25" flex-lg="25" flex-xl="25">
+                        <a href="sites/profile.html?id={{senatorDates.id_legislator_sil}}" target="_blank">
+                          <img id="imgLegis" ng-src="imgs/png/legisladores/{{senatorDates.id_photo_sil}}.png" >
                         </a>
                       </div>
-                      <div flex-offset-md="5" flex-md="55" flex-lg="60" flex-offset-xl="5" flex-xl="75">
+                      <div flex-offset-md="5" flex-md="70" flex-offset-lg="5"  flex-lg="70"  flex-offset-xl="5"  flex-xl="70">
                         <div layout-md="column" layout-lg="column" layout-xl="column">
-                          <span style="font-size:25px;  letter-spacing:2px; color:#EE4656; cursor:pointer;">{{deputyDates.legislator_first_name_sil}}</span>
+                          <span id="nameLegis">{{senatorDates.legislator_first_name_sil}}</span>
                         </div>
                         <div layout-md="column" layout-lg="column" layout-xl="column">
-                          <span style="font-size:25px;  letter-spacing:2px; color:#EE4656; cursor:pointer;">{{deputyDates.legislator_last_name_sil}}</span>
+                          <span id="lastNameLegis">{{senatorDates.legislator_last_name_sil}}</span>
                         </div>
                         <div layout-md="column" layout-lg="column" layout-xl="column">
-                          <span style="padding-top:10px; font-size:23px;  letter-spacing:2px; color:#BBB; cursor:pointer;" ng-click="filters.legislator_election_sil = deputyDates.legislator_election_sil" ng-dblclick="filters.legislator_election_sil = '' ">{{deputyDates.legislator_election_sil}}</span>
+                          <span id="nameElection" ng-click="filtersSenators.legislator_election_sil = senatorDates.legislator_election_sil" ng-dblclick="filtersSenators.legislator_election_sil = ''; ">{{senatorDates.legislator_election_sil}}</span>
                         </div>
                         <div layout-md="column" layout-lg="column" layout-xl="column">
                           <div style="padding-top:10px;" layout-md="row" layout-lg="row" layout-xl="row">
-                            <div style="text-align:left;" flex-md="25" flex-lg="25" flex-xl="25">
-                              <div layout-md="column" layout-lg="column" layout-xl="column">
-                                <span style="font-size:23px; letter-spacing:2px; color:#EE4656; text-transform:uppercase;">score</span>
-                              </div>
-                              <div layout-md="column" layout-lg="column" layout-xl="column">
-                                <span style="font-size:25px; letter-spacing:2px; color:#BBB; cursor:pointer;" ng-click="filters.legislator_score_sil = deputyDates.legislator_score_sil" ng-dblclick="filters.legislator_score_sil = '' " >{{deputyDates.legislator_score_sil}}</span>
-                              </div>
-                            </div>
+                             <div style="text-align:left;" flex-md="20" flex-lg="20" flex-xl="20">
+                                <div layout-md="column" layout-lg="column" layout-xl="column">
+                                  <span id="nameScore">score</span>
+                                </div>
+                                <div layout-md="column" layout-lg="column" layout-xl="column">
+                                  <span id="valueScore" ng-click="filtersSenators.legislator_score_sil = senatorDates.legislator_score_sil" ng-dblclick="filtersSenators.legislator_score_sil = ''; " >{{senatorDates.legislator_score_sil}}</span>
+                                </div>
+                             </div>
                              <div style="text-align:center;" flex-md="55" flex-lg="55" flex-xl="55">
-                               <div layout-md="row" layout-lg="row" layout-xl="row">
+                               <div id="contentSocialIcon" layout-md="row" layout-lg="row" layout-xl="row">
                                   <div style="display:{{classFacebook}};" flex-md="33" flex-lg="33" flex-xl="33">
-                                    <a target="_blank" href="https://www.facebook.com/{{deputyDates.legislator_facebook_sil}}">
-                                     <img style="width:50px; height:100%; cursor:pointer;" onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                                    <a target="_blank" href="https://www.facebook.com/{{senatorDates.legislator_facebook_sil}}">
+                                     <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
                                     </a>
                                   </div>
                                   <div style="display:{{classTwitter}};"  flex-md="33" flex-lg="33" flex-xl="33">
-                                    <a href="https://twitter.com/{{deputyDates.legislator_twitter_senate}}" target="_blank">
-                                     <img style="width:50px; height:100%; cursor:pointer;" onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
+                                    <a href="https://twitter.com/{{senatorDates.legislator_twitter_senate}}" target="_blank">
+                                     <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
                                     </a>
                                   </div>
                                   <div style="display:{{classMail}};" flex-md="33" flex-lg="33" flex-xl="33">
-                                    <a href="mailto:{{deputyDates.legislator_mail_sil}}">
-                                     <img style="width:50px; height:100%; cursor:pointer;" onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
+                                    <a href="mailto:{{senatorDates.legislator_mail_sil}}">
+                                     <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
                                     </a>
                                   </div>
                                 </div>
                               </div>
-                              <div style="text-align:center; cursor:pointer;" ng-mouseover="changeImage=true;" ng-mouseleave="changeImage=false;" ng-init="changeImage=false;" flex-md="20" flex-lg="20" flex-xl="20">
-                               <img ng-click="filters.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filters.legislator_party_sil = '' " style="width:auto; height:auto; cursor:pointer;" ng-hide="changeImage" src="imgs/svg/partys/{{deputyDates.legislator_party_sil}}.svg" />
-                               <img ng-click="filters.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filters.legislator_party_sil = '' " style="width:auto; height:auto; cursor:pointer;" ng-show="changeImage" src="imgs/svg/partys/colors/{{deputyDates.legislator_party_sil}}.svg" />
+                              <div id="contentPartyIcon" style="text-align:center;" ng-mouseover="changeImage=true;" ng-mouseleave="changeImage=false;" ng-init="changeImage=false;" flex-md="25" flex-lg="25" flex-xl="25">
+                                <img ng-click="filtersSenators.legislator_party_sil = senatorDates.legislator_party_sil" ng-dblclick="filtersSenators.legislator_party_sil = ''; " ng-hide="changeImage" src="imgs/svg/partys/{{senatorDates.legislator_party_sil}}.svg" />
+                                <img ng-click="filtersSenators.legislator_party_sil = senatorDates.legislator_party_sil" ng-dblclick="filtersSenators.legislator_party_sil = ''; " ng-show="changeImage" src="imgs/svg/partys/colors/{{senatorDates.legislator_party_sil}}.svg" />
                               </div>
                             </div>
                           </div>
@@ -116,16 +233,249 @@
                   <md-divider style="margin-bottom:5px;" md-inset="" ng-if="!$last"></md-divider>
                 </div>
               </div>
-            </div>
-          </md-content>
-          <div flex-md="50" flex-lg="50" flex-xl="30">
-            sen
-          </div>
-          <div flex-md="50" flex-lg="50" flex-xl="20">
-            dep
-          </div>
+           </md-content>
         </div>
+        <div flex-md="5" flex-lg="15" flex-xl="20">
+        </div>
+    </div>
+    <!--  END DIV CONTENT LEGISLATORS FOR TABLET && DESKTOP-->
 
-      <!--  END DIV CONTENT LEGISLATORS FOR TABLET && DESKTOP-->
+    <!--  BEGIN DIV CONTENT LEGISLATORS FOR TABLET && DESKTOP-->
+    <div hide show-xs show-sm layout-xs="column" layout-sm="column">
+      <md-content  ng-cache="true" style="background:#000;">
+        <md-tabs id="tabs-responsive">
+          <md-tab class="md-display-2" label="Diputados">
+            <md-content id="depscontentMobile" style="background:#EEE;" class="md-padding">
+              <div ng-repeat="deputyDates in deputysApi | filter:filtersDeputys" layout-xs="row" layout-sm="row" >
+                <div flex-xs="0" flex-sm="5">
+                </div>
+                <div  flex-xs="100" flex-sm="95" >
+                  <div layout-xs="row" layout-sm="row">
+                    <div flex-xs="100" flex-sm="100">
+                      <div style="margin-top:30px;" layout-xs="row" layout-sm="row">
+                        <div style="text-align:center;" flex-xs="25" flex-sm="20">
+                          <div id="contentCaliPac" layout-xs="row" layout-sm="row">
+                            <div ng-mouseover="changeImageHappy=true;" ng-mouseleave="changeImageHappy=false;" ng-init="changeImageHappy=false;" flex-xs="33" flex-sm="33" >
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-hide="changeImageHappy" src="imgs/svg/cali_happy.svg" />
+                              </a>
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-show="changeImageHappy" src="imgs/svg/cali_happy_color.svg" />
+                              </a>
+                            </div>
+                            <div ng-mouseover="changeImageSad=true;" ng-mouseleave="changeImageSad=false;" ng-init="changeImageSad=false;" flex-xs="33" flex-sm="33">
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-hide="changeImageSad" src="imgs/svg/cali_sad.svg" />
+                              </a>
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-show="changeImageSad" src="imgs/svg/cali_sad_color.svg" />
+                              </a>
+                            </div>
+                            <div ng-mouseover="changeImageBad=true;" ng-mouseleave="changeImageBad=false;" ng-init="changeImageBad=false;" flex-xs="33" flex-sm="33" >
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-hide="changeImageBad" src="imgs/svg/cali_bad.svg" />
+                              </a>
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-show="changeImageBad" src="imgs/svg/cali_bad_color.svg" />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div flex-xs="75" flex-sm="80">
+                          <div layout-xs="row" layout-sm="row">
+                            <div style="text-align:right;" flex-xs="80" flex-sm="80">
+                              <div layout-xs="column" layout-sm="column">
+                                <!-- <span class="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filters.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filters.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span> -->
+                                <span id="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filtersDeputys.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filtersDeputys.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span>
+                              </div>
+                              <div layout-xs="column" layout-sm="column">
+                                <span id="nameState" ng-click="filtersDeputys.legislator_state_sil = deputyDates.legislator_state_sil" ng-dblclick="filtersDeputys.legislator_state_sil = ''; ">{{deputyDates.legislator_state_sil}}</span>
+                              </div>
+                            </div>
+                            <div  ng-mouseover="changeImageState=true;" ng-mouseleave="changeImageState=false;" ng-init="changeImageState=false;" style="text-align:center;" flex-xs="20" flex-sm="20">
+                              <img id="imgState" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-hide="changeImageState" src="imgs/svg/states/{{deputyDates.legislator_zone_sil}}.svg" />
+                              <img id="imgState" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-show="changeImageState" src="imgs/svg/states/colors/{{deputyDates.legislator_zone_sil}}.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div layout-xs="row" layout-sm="row">
+                        <div style="text-align:center;" flex-xs="25" flex-sm="20">
+                          <a href="sites/profile.html?id={{deputyDates.id_legislator_sil}}" target="_blank">
+                            <img id="imgLegis" ng-src="imgs/png/legisladores/{{deputyDates.id_photo_sil}}.png" >
+                          </a>
+                        </div>
+                        <div flex-offset-xs="5" flex-xs="70" flex-offset-sm="5"  flex-sm="75">
+                          <div layout-xs="column" layout-sm="column">
+                            <span id="nameLegis">{{deputyDates.legislator_first_name_sil}}</span>
+                          </div>
+                          <div layout-xs="column" layout-sm="column">
+                            <span id="lastNameLegis">{{deputyDates.legislator_last_name_sil}}</span>
+                          </div>
+                          <div layout-xs="column" layout-sm="column">
+                            <span id="nameElection" ng-click="filtersDeputys.legislator_election_sil = deputyDates.legislator_election_sil" ng-dblclick="filtersDeputys.legislator_election_sil = ''; ">{{deputyDates.legislator_election_sil}}</span>
+                          </div>
+                          <div layout-xs="column" layout-sm="column">
+                            <div style="padding-top:10px;" layout-xs="row" layout-sm="row">
+                               <div style="text-align:left;" flex-xs="20" flex-sm="20">
+                                  <div layout-xs="column" layout-sm="column">
+                                    <span id="nameScore">score</span>
+                                  </div>
+                                  <div layout-xs="column" layout-sm="column">
+                                    <span id="valueScore" ng-click="filtersDeputys.legislator_score_sil = deputyDates.legislator_score_sil" ng-dblclick="filtersDeputys.legislator_score_sil = ''; " >{{deputyDates.legislator_score_sil}}</span>
+                                  </div>
+                               </div>
+                               <div style="text-align:center;" flex-xs="55" flex-sm="55">
+                                 <div id="contentSocialIcon" layout-xs="row" layout-sm="row">
+                                    <div  flex-xs="33" flex-sm="33" style="display:{{classFacebook}}">
+                                      <a target="_blank" href="https://www.facebook.com/{{deputyDates.legislator_facebook_sil}}">
+                                       <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                                      </a>
+                                    </div>
+                                    <div style="display:{{classTwitter}};" flex-xs="33" flex-sm="33" >
+                                      <a href="https://twitter.com/{{deputyDates.legislator_twitter_senate}}" target="_blank">
+                                       <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
+                                      </a>
+                                    </div>
+                                    <div  style="display:{{classMail}};" flex-xs="33" flex-sm="33" >
+                                      <a href="mailto:{{deputyDates.legislator_mail_sil}}">
+                                       <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="contentPartyIcon" style="text-align:center;" ng-mouseover="changeImage=true;" ng-mouseleave="changeImage=false;" ng-init="changeImage=false;" flex-md="25" flex-lg="25" flex-xl="25">
+                                  <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-hide="changeImage" src="imgs/svg/partys/{{deputyDates.legislator_party_sil}}.svg" />
+                                  <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-show="changeImage" src="imgs/svg/partys/colors/{{deputyDates.legislator_party_sil}}.svg" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <md-divider style="margin-bottom:5px;" md-inset="" ng-if="!$last"></md-divider>
+                  </div>
+                </div>
+            </md-content>
+          </md-tab>
+          <md-tab class="md-display-2" label="Senadores">
+            <md-content id="senatorscontentMobile" style="background:#EEE;" class="md-padding">
+              <div ng-repeat="deputyDates in deputysApi | filter:filtersDeputys" layout-xs="row" layout-sm="row" >
+                <div flex-xs="0" flex-sm="5">
+                </div>
+                <div  flex-xs="100" flex-sm="95" >
+                  <div layout-xs="row" layout-sm="row">
+                    <div flex-xs="100" flex-sm="100">
+                      <div style="margin-top:30px;" layout-xs="row" layout-sm="row">
+                        <div style="text-align:center;" flex-xs="25" flex-sm="20">
+                          <div id="contentCaliPac" layout-xs="row" layout-sm="row">
+                            <div ng-mouseover="changeImageHappy=true;" ng-mouseleave="changeImageHappy=false;" ng-init="changeImageHappy=false;" flex-xs="33" flex-sm="33" >
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-hide="changeImageHappy" src="imgs/svg/cali_happy.svg" />
+                              </a>
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-show="changeImageHappy" src="imgs/svg/cali_happy_color.svg" />
+                              </a>
+                            </div>
+                            <div ng-mouseover="changeImageSad=true;" ng-mouseleave="changeImageSad=false;" ng-init="changeImageSad=false;" flex-xs="33" flex-sm="33">
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-hide="changeImageSad" src="imgs/svg/cali_sad.svg" />
+                              </a>
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-show="changeImageSad" src="imgs/svg/cali_sad_color.svg" />
+                              </a>
+                            </div>
+                            <div ng-mouseover="changeImageBad=true;" ng-mouseleave="changeImageBad=false;" ng-init="changeImageBad=false;" flex-xs="33" flex-sm="33" >
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-hide="changeImageBad" src="imgs/svg/cali_bad.svg" />
+                              </a>
+                              <a href="http://pac.bordepolitico.com" target="_blank">
+                                <img ng-show="changeImageBad" src="imgs/svg/cali_bad_color.svg" />
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        <div flex-xs="75" flex-sm="80">
+                          <div layout-xs="row" layout-sm="row">
+                            <div style="text-align:right;" flex-xs="80" flex-sm="80">
+                              <div layout-xs="column" layout-sm="column">
+                                <!-- <span class="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filters.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filters.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span> -->
+                                <span id="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filtersDeputys.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filtersDeputys.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span>
+                              </div>
+                              <div layout-xs="column" layout-sm="column">
+                                <span id="nameState" ng-click="filtersDeputys.legislator_state_sil = deputyDates.legislator_state_sil" ng-dblclick="filtersDeputys.legislator_state_sil = ''; ">{{deputyDates.legislator_state_sil}}</span>
+                              </div>
+                            </div>
+                            <div  ng-mouseover="changeImageState=true;" ng-mouseleave="changeImageState=false;" ng-init="changeImageState=false;" style="text-align:center;" flex-xs="20" flex-sm="20">
+                              <img id="imgState" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-hide="changeImageState" src="imgs/svg/states/{{deputyDates.legislator_zone_sil}}.svg" />
+                              <img id="imgState" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-show="changeImageState" src="imgs/svg/states/colors/{{deputyDates.legislator_zone_sil}}.svg" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div layout-xs="row" layout-sm="row">
+                        <div style="text-align:center;" flex-xs="25" flex-sm="20">
+                          <a href="sites/profile.html?id={{deputyDates.id_legislator_sil}}" target="_blank">
+                            <img id="imgLegis" ng-src="imgs/png/legisladores/{{deputyDates.id_photo_sil}}.png" >
+                          </a>
+                        </div>
+                        <div flex-offset-xs="5" flex-xs="70" flex-offset-sm="5"  flex-sm="75">
+                          <div layout-xs="column" layout-sm="column">
+                            <span id="nameLegis">{{deputyDates.legislator_first_name_sil}}</span>
+                          </div>
+                          <div layout-xs="column" layout-sm="column">
+                            <span id="lastNameLegis">{{deputyDates.legislator_last_name_sil}}</span>
+                          </div>
+                          <div layout-xs="column" layout-sm="column">
+                            <span id="nameElection" ng-click="filtersDeputys.legislator_election_sil = deputyDates.legislator_election_sil" ng-dblclick="filtersDeputys.legislator_election_sil = ''; ">{{deputyDates.legislator_election_sil}}</span>
+                          </div>
+                          <div layout-xs="column" layout-sm="column">
+                            <div style="padding-top:10px;" layout-xs="row" layout-sm="row">
+                               <div style="text-align:left;" flex-xs="20" flex-sm="20">
+                                  <div layout-xs="column" layout-sm="column">
+                                    <span id="nameScore">score</span>
+                                  </div>
+                                  <div layout-xs="column" layout-sm="column">
+                                    <span id="valueScore" ng-click="filtersDeputys.legislator_score_sil = deputyDates.legislator_score_sil" ng-dblclick="filtersDeputys.legislator_score_sil = ''; " >{{deputyDates.legislator_score_sil}}</span>
+                                  </div>
+                               </div>
+                               <div style="text-align:center;" flex-xs="55" flex-sm="55">
+                                 <div id="contentSocialIcon" layout-xs="row" layout-sm="row">
+                                    <div  flex-xs="33" flex-sm="33" style="display:{{classFacebook}}">
+                                      <a target="_blank" href="https://www.facebook.com/{{deputyDates.legislator_facebook_sil}}">
+                                       <img onmouseover="this.src='imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='imgs/svg/facebook_cards.svg'" src="imgs/svg/facebook_cards.svg">
+                                      </a>
+                                    </div>
+                                    <div style="display:{{classTwitter}};" flex-xs="33" flex-sm="33" >
+                                      <a href="https://twitter.com/{{deputyDates.legislator_twitter_senate}}" target="_blank">
+                                       <img onmouseover="this.src='imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='imgs/svg/twiter_cards.svg'" src="imgs/svg/twiter_cards.svg">
+                                      </a>
+                                    </div>
+                                    <div  style="display:{{classMail}};" flex-xs="33" flex-sm="33" >
+                                      <a href="mailto:{{deputyDates.legislator_mail_sil}}">
+                                       <img onmouseover="this.src='imgs/svg/mail_cards_color.svg'" onmouseout="this.src='imgs/svg/mail_cards.svg'" src="imgs/svg/mail_cards.svg">
+                                      </a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div id="contentPartyIcon" style="text-align:center;" ng-mouseover="changeImage=true;" ng-mouseleave="changeImage=false;" ng-init="changeImage=false;" flex-md="25" flex-lg="25" flex-xl="25">
+                                  <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-hide="changeImage" src="imgs/svg/partys/{{deputyDates.legislator_party_sil}}.svg" />
+                                  <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-show="changeImage" src="imgs/svg/partys/colors/{{deputyDates.legislator_party_sil}}.svg" />
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <md-divider style="margin-bottom:5px;" md-inset="" ng-if="!$last"></md-divider>
+                  </div>
+                </div>
+            </md-content>
+          </md-tab>
+        </md-tabs>
+      </md-content>
+    </div>
   </div>
 </div>
