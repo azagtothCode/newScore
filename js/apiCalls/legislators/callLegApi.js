@@ -1,8 +1,8 @@
 var app = angular.module("myApp", ['ngMaterial','ngRoute', 'ngMessages']);
 var dataChamberDeputy = $.param({ legislator_chamber_sil: "diputado" }, {id_legislator_sil:1});
 var dataChamberSenator = $.param({ legislator_chamber_sil: "senador" });
-var supurl='http://localhost:8000';
-// var supurl='http://104.239.248.102:8000';
+// var supurl='http://localhost:8000';
+var supurl='http://104.239.248.102:8000';
 
 function openPerfilPage (url){
   window.open(url)
