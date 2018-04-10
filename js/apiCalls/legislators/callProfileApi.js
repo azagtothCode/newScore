@@ -1,6 +1,6 @@
 var app = angular.module("myApp", ['ngMaterial']);
-var supurl='http://localhost:8000';
-// var supurl='http://104.239.248.102:8000';
+// var supurl='http://localhost:8000';
+var supurl='http://104.239.248.102:8000';
 
 function getQueryVariable(variable) {
    // Estoy asumiendo que query es window.location.search.substring(1);
