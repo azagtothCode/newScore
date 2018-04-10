@@ -6,53 +6,56 @@
   <meta charset="UTF-8"></meta>
   <!-- Angular Material style sheet -->
   <link rel="stylesheet" href="../css/externs/angular-material.min.css">
-  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css">
+  <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css"> -->
   <link rel="stylesheet" href="../css/others/headNavPanel.css">
+  <link rel="stylesheet" href="../css/profile/styles_profile.css">
 </head>
-<body ng-app="myApp">
+<body id="contentPerfil"  ng-app="myApp">
   <!-- Begin Code Application -->
   <!-- <h1 ng-controller="searchLegislatorController">Perfil de {{nameProfile}}</h1> -->
   <!-- Begin Code BarNavigation -->
-  <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-    <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-       <div flex-xs="0" flex-sm="0" flex-md="5" flex-lg="10" flex-xl="10"  >
-       </div>
-       <div flex-xs="100" flex-sm="100" flex-md="90" flex-lg="80" flex-xl="80" >
-          <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" layout-xs="row" layout-sm="row"  >
-            <div onclick="location.href='#/!'" flex-xs="25" flex-sm="25" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" id="icon-logo">
-            </div>
-            <div flex-xs="50" flex-sm="50" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
-              <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-gt-md="row" layout-xl="row">
+   <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+     <div flex-xs="80" flex-sm="80" flex-md="80" flex-lg="80" flex-xl="85"  >
+       <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+         <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+            <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
+             <div  id="navbar"  layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" layout-xs="row" layout-sm="row"  >
+               <div onclick="location.href='#/!'" flex-xs="25" flex-sm="25" flex-md="10" flex-gt-md="10" flex-gt-lg="25" flex-lg="25" flex-xl="25" id="icon-logo">
+               </div>
+               <div flex-xs=50 flex-sm="50" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
+                <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-gt-md="row" layout-xl="row">
+                </div>
+               </div>
+               <div flex-xs="25" flex-sm="25" flex-md="40" flex-gt-md="40" flex-gt-lg="25" flex-lg="25" flex-xl="25" style="text-align:center;">
+                <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
+                  <img id="icon-menu" src="../imgs/svg/logo_b.svg">
+                 </md-button>
+                 <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+                   <img id="icon-menu" src="../imgs/svg/menu.svg"  >
+                 </md-button>
+                 <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
+               </div>
               </div>
             </div>
-            <div flex-xs="25" flex-sm="25" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" style="text-align:center;">
-              <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
-                <img id="icon-menu" src="../imgs/svg/logo_b.svg">
-               </md-button>
-               <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
-                 <img id="icon-menu" src="../imgs/svg/menu.svg"  >
-               </md-button>
-               <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
-            </div>
           </div>
-       </div>
-       <div flex-xs="0" flex-sm="0" flex-md="5"  flex-lg="10"  flex-xl="10">
-       </div>
-     </div>
-    </div>
+        </div>
+        <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+        </div>
+      </div>
+   </div>
   <!-- End Code BarNavigation -->
 
   <!-- Begin Code PanelMenu -->
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
     <!--panel section head-->
     <md-toolbar flex="row"  id="nav-menu-index" >
-      <div>
-        <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="../imgs/png/logo_borde.png">
-        <span flex id="text-site-panel-menu">Menú Principal</span>
-          <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
-            <img id="icon-close" src="../imgs/svg/close.svg">
-          </md-button>
-      </div>
+     <div>
+      <img ng-controller="OpenBordePanel" ng-click="openBordePanel()"  id="img-site-panel" src="../imgs/png/logo_borde.png">
+      <span flex id="text-site-panel-menu">Menú Principal</span>
+        <md-button id="close-btn" ng-controller="RightCtrl" ng-click="close()" class="md-icon-button md-accent" aria-label="Favorite">
+          <img id="icon-close" src="../imgs/svg/close.svg">
+        </md-button>
+     </div>
     </md-toolbar>
     <!--panel section content-->
     <md-content ng-controller="RightCtrl" layout-padding="">

@@ -1,0 +1,14 @@
+#contentPerfil{
+  background-image: url(../../imgs/png/slide_head_dip.jpg);
+  height: 100%;
+  background-size: 100%, 100%;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: auto;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+}
+
+md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.md-locked-open-add, md-sidenav.md-locked-open-remove, md-sidenav.md-locked-open-remove.md-closed, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-left, md-sidenav.md-locked-open.md-closed.md-sidenav-right {
+    width: auto;
+}

@@ -54,6 +54,26 @@
   background:#EE2656;
 }
 
+.subheaderLXIII{
+  background: #FAFAFA;
+  color: #EE4656;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.subheaderLXII{
+  background: #FAFAFA;
+  color: #EE4353;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+md-tabs .md-tab.md-active {
+  cursor: default;
+  color: #EE4353;
+}
+
+
 @media only screen and (max-width: 1919px) {
   #nameChamber{
    font-size: 25px;

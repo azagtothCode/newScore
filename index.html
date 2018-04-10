@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="css/others/headNavPanel.css">
   <link rel="stylesheet" href="css/others/slideHome.css">
   <link rel="stylesheet" href="css/home/stylesHome.css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <!-- <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> -->
 </head>
 <body ng-app="myApp">
   <!-- Begin Code Application -->
@@ -82,11 +82,13 @@
                 md-item-text="item.name" md-min-length="0" placeholder="BÚSCAR LEGISLADOR"
                 md-menu-class="autocomplete-custom-template">
                   <md-item-template >
-                    <span class="item-title">
-                      <md-icon md-svg-icon="imgs/svg/partys/colors/{{item.party}}.svg"></md-icon>
-                      <span style="color:#C8424F;">{{item.chamber}}</span>
-                      <span>{{item.name}}</span>
-                    </span>
+                    <a style="color:#FFF; text-decoration:none;" href="sites/profile.html?id={{item.id}}" target="_blank">
+                      <span class="item-title">
+                        <md-icon md-svg-icon="imgs/svg/partys/colors/{{item.party}}.svg"></md-icon>
+                        <span style="color:#C8424F;">{{item.chamber}}</span>
+                        <span>{{item.name}}</span>
+                      </span>
+                    </a>
                   </md-item-template>
                 </md-autocomplete>
               </form>
@@ -107,11 +109,13 @@
                md-item-text="item.name" md-min-length="0" placeholder="BÚSCAR LEGISLADOR"
                md-menu-class="autocomplete-custom-template">
                  <md-item-template >
-                   <span class="item-title">
-                     <md-icon md-svg-icon="imgs/svg/partys/colors/{{item.party}}.svg"></md-icon>
-                     <span style="color:#C8424F;">{{item.chamber}}</span>
-                     <span>{{item.name}}</span>
-                   </span>
+                   <a style="color:#FFF; text-decoration:none;" href="sites/profile.html?id={{item.id}}" target="_blank">
+                     <span class="item-title">
+                       <md-icon md-svg-icon="imgs/svg/partys/colors/{{item.party}}.svg"></md-icon>
+                       <span style="color:#C8424F;">{{item.chamber}}</span>
+                       <span>{{item.name}}</span>
+                     </span>
+                   </a>
                  </md-item-template>
                </md-autocomplete>
              </form>

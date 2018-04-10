@@ -1,11 +1,11 @@
 @font-face {font-family: Montserrat; src: url(../../docs/mon.ttf);} *:focus {outline: none;}
-html, body{font-family: 'Montserrat'; text-decoration: none;}
+html, body {font-family: 'Montserrat'; text-decoration: none;}
 .contentdemoBasicUsage md-content {height: 900px;}
 
 #navbar{
   background: #000;
-  position: fixed;
-  width: 100%;
+  /* position: fixed; */
+  /* width: 100%; */
   /* opacity: 0.8; */
   z-index: 3;
   height: auto;
@@ -18,7 +18,7 @@ html, body{font-family: 'Montserrat'; text-decoration: none;}
   background-size: contain;
   width: 100%;
   height: auto;
-  background-position: left;
+  background-position: center;
 }
 
 #nav-menu-index{
@@ -61,7 +61,7 @@ html, body{font-family: 'Montserrat'; text-decoration: none;}
 
 #close-btn{
   margin-left: 274px;
-  margin-top: -3px;
+  margin-top: 5px;
 }
 
 #icon-close{
