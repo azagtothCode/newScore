@@ -107,6 +107,7 @@ app.controller('deputyController', ['$scope', '$http', '$cacheFactory', function
         for (var i = 0; i < arrAll.length; i++) {
 
             val=arrAll[i];
+
               if(val.legislator_gender_sil=="M"){
                   val.legislator_chamber_sil="Diputado";
               }
