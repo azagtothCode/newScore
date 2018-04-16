@@ -140,29 +140,6 @@ md-backdrop.md-opaque {
   height: auto;
 }
 
-#slide-head-profile-dip{
-  background-image: url(../imgs/png/slide_head_dip.jpg);
-  min-height: 400px;
-  background-size: 100% 600px;
-  background-position: top;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  width: auto;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-}
-
-#slide-head-profile-sen{
-  background-image: url(../imgs/png/slide_head_sen.jpg);
-  min-height: 250px;
-  background-size: 100% 250px;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  width: auto;
-  transition: all 500ms;
-  -webkit-transition: all 500ms;
-}
-
 .btn-text-one{
   color: #FFF;
   font-size: 25px;
@@ -217,10 +194,6 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
 }
 
 @media only screen and (max-width: 1680px) {
-  #slide-head-profile-dip{
-    background-size: 100% 540px;
-  }
-
   #boton-borde {
     margin-left: 34px;
   }
@@ -249,18 +222,9 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
     margin-left: 0px;
     margin-top: 0px;
   }
-
-  #slide-head-profile-dip{
-    background-size: 100% 375px;
-  }
-
 }
 
 @media only screen and (max-width: 1366px) {
-  #slide-head-profile-dip{
-    background-size: 100% 450px;
-  }
-
   .btn-text-one {
     font-size: 23px;
   }
@@ -348,9 +312,6 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
     letter-spacing: 15px;
   }
 
-  #slide-head-profile-dip{
-    background-size: 100% 375px;
-  }
 }
 
 @media only screen and (max-width: 959px) {
@@ -361,15 +322,6 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
 
   #div-circle-score {
     margin-top: 100px;
-  }
-
-  #slide-head-profile-dip{
-    min-height: auto;
-    background-size: 100% 595px;
-  }
-
-  #slide-head-profile-dip{
-    min-height: 300px;
   }
 
   #slide-head {
@@ -666,10 +618,6 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
 
 @media only screen and (max-width: 375px) {
 
-  #slide-head-profile-dip {
-    background-size: 100% 460px;
-  }
-
  #div-buttons-score{
    margin-top: -5px;
    height: 0px;
@@ -809,10 +757,6 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
  #color-btn {
    margin-right: 2px;
    margin-left: 2px;
- }
-
- #slide-head-profile-dip {
-  background-size: 100% 465px;
  }
 
  md-tabs.md-default-theme .md-tab, md-tabs .md-tab {

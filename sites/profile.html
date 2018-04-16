@@ -9,41 +9,210 @@
   <!-- <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/angular_material/1.1.6/angular-material.min.css"> -->
   <link rel="stylesheet" href="../css/others/headNavPanel.css">
   <link rel="stylesheet" href="../css/profile/styles_profile.css">
+  <!-- <link rel="stylesheet" href="../css/home/styleshome.css"> -->
 </head>
-<body id="contentPerfil"  ng-app="myApp">
-  <!-- Begin Code Application -->
-  <!-- <h1 ng-controller="searchLegislatorController">Perfil de {{nameProfile}}</h1> -->
+<!-- Begin Code Application -->
+<body ng-app="myApp">
   <!-- Begin Code BarNavigation -->
-   <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-     <div flex-xs="80" flex-sm="80" flex-md="80" flex-lg="80" flex-xl="85"  >
-       <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-         <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
-            <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100" >
-             <div  id="navbar"  layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" layout-xs="row" layout-sm="row"  >
-               <div onclick="location.href='#/!'" flex-xs="25" flex-sm="25" flex-md="10" flex-gt-md="10" flex-gt-lg="25" flex-lg="25" flex-xl="25" id="icon-logo">
+  <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+    <div id="navbar" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+      <div flex-xs="0" flex-sm="0" flex-md="5" flex-lg="15" flex-xl="20"  >
+      </div>
+      <div flex-xs="100" flex-sm="100" flex-md="90" flex-lg="70" flex-xl="60" >
+        <div layout-md="row" layout-gt-md="row" layout-lg="row" layout-gt-lg="row" layout-xl="row" layout-xs="row" layout-sm="row"  >
+          <div onclick="location.href='#/!'" flex-xs="25" flex-sm="25" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" id="icon-logo">
+          </div>
+          <div flex-xs="60" flex-sm="50" flex-md="60" flex-gt-md="60" flex-gt-lg="60" flex-lg="60" flex-xl="60" >
+            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-gt-md="row" layout-xl="row">
+            </div>
+          </div>
+          <div id="divButtonsMenuProfile" flex-xs="15" flex-sm="25" flex-md="20" flex-gt-md="20" flex-gt-lg="20" flex-lg="20" flex-xl="20" >
+            <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
+              <img id="icon-menu" src="../imgs/svg/logo_b.svg">
+            </md-button>
+            <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
+              <img id="icon-menu" src="../imgs/svg/menu.svg"  >
+            </md-button>
+            <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
+          </div>
+        </div>
+      </div>
+      <div flex-xs="0" flex-sm="0" flex-md="5"  flex-lg="15"  flex-xl="20">
+      </div>
+    </div>
+  </div>
+
+  <!-- Begin Slide Profile -->
+  <div id="slide-profile" ng-controller="searchLegislatorController" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+    <div id="contentCardGraph" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+     <div flex-xs="0" flex-sm="0" flex-md="5" flex-lg="15" flex-xl="20">
+     </div>
+     <div flex-xs="100" flex-sm="100" flex-md="90" flex-lg="70" flex-xl="60">
+      <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+       <div flex-xs="5" flex-sm="5" flex-md="5" flex-lg="5" flex-xl="5">
+       </div>
+       <div flex-xs="90" flex-sm="90" flex-md="60" flex-lg="60" flex-xl="60">
+        <div id="divCardProfile"  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+         <div flex-xs="0" flex-sm="0" flex-md="0" flex-lg="0" flex-xl="0">
+         </div>
+         <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
+           <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+             <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
+               <div id="contentCaliProfile" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+                 <div style="text-align:center;" flex-xs="25" flex-sm="20" flex-md="25" flex-lg="25" flex-xl="25">
+                   <div id="contentCaliPacProfile" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+                     <div ng-mouseover="changeImageHappy=true;" ng-mouseleave="changeImageHappy=false;" ng-init="changeImageHappy=false;" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                       <a href="http://pac.bordepolitico.com" target="_blank">
+                         <img ng-hide="changeImageHappy" src="../imgs/svg/cali_happy.svg" />
+                       </a>
+                       <a href="http://pac.bordepolitico.com" target="_blank">
+                         <img ng-show="changeImageHappy" src="../imgs/svg/cali_happy_color.svg" />
+                       </a>
+                     </div>
+                     <div ng-mouseover="changeImageSad=true;" ng-mouseleave="changeImageSad=false;" ng-init="changeImageSad=false;" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                       <a href="http://pac.bordepolitico.com" target="_blank">
+                         <img ng-hide="changeImageSad" src="../imgs/svg/cali_sad.svg" />
+                       </a>
+                       <a href="http://pac.bordepolitico.com" target="_blank">
+                         <img ng-show="changeImageSad" src="../imgs/svg/cali_sad_color.svg" />
+                       </a>
+                     </div>
+                     <div ng-mouseover="changeImageBad=true;" ng-mouseleave="changeImageBad=false;" ng-init="changeImageBad=false;" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                       <a href="http://pac.bordepolitico.com" target="_blank">
+                         <img ng-hide="changeImageBad" src="../imgs/svg/cali_bad.svg" />
+                       </a>
+                       <a href="http://pac.bordepolitico.com" target="_blank">
+                         <img ng-show="changeImageBad" src="../imgs/svg/cali_bad_color.svg" />
+                       </a>
+                     </div>
+                   </div>
+                 </div>
+                 <div flex-xs="75" flex-sm="80" flex-md="75" flex-lg="75" flex-xl="75">
+                   <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+                     <div style="text-align:right;" flex-xs="80" flex-sm="80" flex-md="80" flex-lg="80" flex-xl="80">
+                       <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                         <!-- <span class="nameChamber" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filters.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filters.legislator_chamber_sil = ''; activeButtonDouble();">{{deputyDates.legislator_chamber_sil}}</span> -->
+                         <span id="nameChamberProfile" ng-class="{'active': isActive, 'actived': isActived}" ng-click="filtersDeputys.legislator_chamber_sil = deputyDates.legislator_chamber_sil; activeButton();" ng-dblclick="filtersDeputys.legislator_chamber_sil = ''; activeButtonDouble();">{{chamberProfile}}</span>
+                       </div>
+                       <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                         <span id="nameStateProfile" ng-click="filtersDeputys.legislator_state_sil = deputyDates.legislator_state_sil" ng-dblclick="filtersDeputys.legislator_state_sil = ''; ">{{stateProfile}}</span>
+                       </div>
+                     </div>
+                     <div  ng-mouseover="changeImageState=true;" ng-mouseleave="changeImageState=false;" ng-init="changeImageState=false;" style="text-align:center;" flex-xs="20" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20">
+                       <img id="imgStateProfile" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-hide="changeImageState" src="../imgs/svg/states/{{zoneProfile}}.svg" />
+                       <img id="imgStateProfile" ng-click="filtersDeputys.legislator_zone_sil = deputyDates.legislator_zone_sil" ng-dblclick="filtersDeputys.legislator_zone_sil = ''; "  ng-show="changeImageState" src="../imgs/svg/states/colors/{{zoneProfile}}.svg" />
+                     </div>
+                   </div>
+                 </div>
                </div>
-               <div flex-xs=50 flex-sm="50" flex-md="50" flex-gt-md="50" flex-gt-lg="50" flex-lg="50" flex-xl="50" >
-                <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-gt-md="row" layout-xl="row">
-                </div>
+               <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+                 <div flex-xs="25" flex-sm="20" flex-md="25" flex-lg="25" flex-xl="25">
+                     <img id="imgLegisProfile" src="../imgs/png/legisladores/{{photoProfile}}.png" >
+                 </div>
+                 <div flex-offset-xs="5" flex-xs="65" flex-offset-sm="5" flex-sm="75" flex-offset-md="5" flex-md="70" flex-offset-lg="5"  flex-lg="70"  flex-offset-xl="5"  flex-xl="70">
+                   <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     <span id="nameLegisProfile">{{nameProfile}}</span>
+                   </div>
+                   <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     <span id="lastNameLegisProfile">{{lastNameProfile}}</span>
+                   </div>
+                   <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     <span id="nameElectionProfile" ng-click="filtersDeputys.legislator_election_sil = deputyDates.legislator_election_sil" ng-dblclick="filtersDeputys.legislator_election_sil = ''; ">{{electionProfile}}</span>
+                   </div>
+                   <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                     <div style="padding-top:10px;" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+                        <div style="text-align:left;" flex-xs="25" flex-sm="20" flex-md="20" flex-lg="20" flex-xl="20">
+                           <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                             <span id="nameScoreProfile">score</span>
+                           </div>
+                           <div layout-xs="column" layout-sm="column" layout-md="column" layout-lg="column" layout-xl="column">
+                             <span id="valueScoreProfile" ng-click="filtersDeputys.legislator_score_sil = deputyDates.legislator_score_sil" ng-dblclick="filtersDeputys.legislator_score_sil = ''; " >{{scoreProfile}}</span>
+                           </div>
+                        </div>
+                        <div style="text-align:center;" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55">
+                          <div id="contentSocialIconProfile" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+                             <div  flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33" style="display:{{deputyDates.legislator_facebook_sil}};">
+                               <a target="_blank" href="https://www.facebook.com/{{deputyDates.legislator_facebook_sil}}">
+                                <img onmouseover="this.src='../imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='../imgs/svg/facebook_cards.svg'" src="../imgs/svg/facebook_cards.svg">
+                               </a>
+                             </div>
+                             <div style="display:{{deputyDates.legislator_twitter_senate}};" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                               <a href="https://twitter.com/{{deputyDates.legislator_twitter_senate}}" target="_blank">
+                                <img onmouseover="this.src='../imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='../imgs/svg/twiter_cards.svg'" src="../imgs/svg/twiter_cards.svg">
+                               </a>
+                             </div>
+                             <div  style="display:{{deputyDates.legislator_mail_sil}};" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                               <a href="mailto:{{deputyDates.legislator_mail_sil}}">
+                                <img onmouseover="this.src='../imgs/svg/mail_cards_color.svg'" onmouseout="this.src='../imgs/svg/mail_cards.svg'" src="../imgs/svg/mail_cards.svg">
+                               </a>
+                             </div>
+                           </div>
+                        </div>
+                        <div id="contentPartyIconProfile" style="text-align:center;" ng-mouseover="changeImage=true;" ng-mouseleave="changeImage=false;" ng-init="changeImage=false;" flex-xs="20" flex-sm="25" flex-md="25" flex-lg="25" flex-xl="25">
+                          <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-hide="changeImage" src="../imgs/svg/partys/{{partyProfile | lowercase}}.svg" />
+                          <img ng-click="filtersDeputys.legislator_party_sil = deputyDates.legislator_party_sil" ng-dblclick="filtersDeputys.legislator_party_sil = ''; " ng-show="changeImage" src="../imgs/svg/partys/colors/{{partyProfile | lowercase}}.svg" />
+                        </div>
+                       </div>
+                     </div>
+                   </div>
+                 </div>
                </div>
-               <div flex-xs="25" flex-sm="25" flex-md="40" flex-gt-md="40" flex-gt-lg="25" flex-lg="25" flex-xl="25" style="text-align:center;">
-                <md-button hide-xs id="boton-borde" ng-cloak="" ng-controller="OpenBordePanel" ng-click="openBordePanel()" aria-label="Menu" class="sidenavdemoBasicUsage md-fab">
-                  <img id="icon-menu" src="../imgs/svg/logo_b.svg">
-                 </md-button>
-                 <md-button hide-xs id="boton-menu" ng-cloak="" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage md-fab"  aria-label="Menu"  ng-click="toggleRight()" ng-hide="isOpenRight()">
-                   <img id="icon-menu" src="../imgs/svg/menu.svg"  >
-                 </md-button>
-                 <img hide show-xs id="icon-menu" src="../imgs/svg/menu-responsive.svg" ng-controller="PanelCtrl" class="sidenavdemoBasicUsage" ng-click="toggleRight()" ng-hide="isOpenRight()">
-               </div>
+             </div>
+            <md-divider style="margin-bottom:5px;" md-inset="" ng-if="!$last"></md-divider>
+          </div>
+         </div>
+       </div>
+       <div  id="divDonutProfile" flex-xs="5" flex-sm="5" flex-md="35" flex-lg="35" flex-xl="35">
+        <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+          <div  flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
+            <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+              <div flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                <span ng-cloak id="workProfile">{{workProfile}}</span>
+                <span ng-cloak id="workProfile">Trabajo</span>
+              </div>
+              <div flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                <span ng-cloak id="extraProfile">{{extraProfile}}</span>
+                <span ng-cloak id="extraProfile">Extra</span>
+              </div>
+              <div flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                <span ng-cloak id="rolProfile">{{rolProfile}}</span>
+                <span ng-cloak id="rolProfile">Rol</span>
               </div>
             </div>
           </div>
         </div>
-        <div layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+        <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+          <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
+            <canvas style="width: 100%;" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+            </canvas>
+          </div>
+        </div>
+       </div>
+     </div>
+     <div flex-xs="0" flex-sm="0" flex-md="5"  flex-lg="15"  flex-xl="20">
+     </div>
+    </div>
+   </div>
+  </div>
+  <div  layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
+    <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+      <div flex-xs="0" flex-sm="5" flex-md="5" flex-lg="15" flex-xl="20">
+      </div>
+      <div flex-xs="100" flex-sm="90" flex-md="90" flex-lg="70" flex-xl="60">
+        <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+          <div flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50">
+            aqui
+          </div>
+          <div flex-xs="50" flex-sm="50" flex-md="50" flex-lg="50" flex-xl="50">
+            aqui
+          </div>
         </div>
       </div>
-   </div>
-  <!-- End Code BarNavigation -->
+      <div flex-xs="0" flex-sm="5" flex-md="5"  flex-lg="15"  flex-xl="20">
+      </div>
+    </div>
+  </div>
+  <!-- End Code Slide Profile -->
 
   <!-- Begin Code PanelMenu -->
   <md-sidenav  class="md-sidenav-right md-whiteframe-4dp" md-component-id="right" style="position:fixed;">
@@ -136,15 +305,9 @@
   <!-- End Code PaghnelMenu -->
   <!-- End Code Application -->
 
-
   <!-- Angular Material requires Angular.js Libraries -->
-  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-animate.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-aria.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-messages.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> -->
 
-  <!-- Angular Material requires Angular.js Libraries -->
+
   <script src="../js/externs/angular.js" ></script>
   <script src="../js/externs/angular-animate.min.js" ></script>
   <script src="../js/externs/angular-aria.min.js" ></script>
@@ -155,10 +318,12 @@
   <script src="../js/externs/angular-material.min.js" ></script>
   <script src="../js/externs/angular-route.js" ></script>
 
+  <script src="../node_modules/angular/angular.min.js"></script>
+  <script src="../node_modules/chart.js/dist/Chart.min.js"></script>
+  <script src="../node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+
   <!-- Your application bootstrap  -->
   <script src="../js/apiCalls/legislators/callProfileApi.js"></script>
   <script src="../js/functions/navHeadPanel.js"></script>
-
-
 </body>
 </html>

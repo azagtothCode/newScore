@@ -9,6 +9,240 @@
   -webkit-transition: all 500ms;
 }
 
+#slide-profile{
+  background-image: url(../../imgs/png/slide_head_dip.jpg);
+  min-height: 50px;
+  background-size: 100% 800px;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  width: auto;
+  transition: all 500ms;
+  -webkit-transition: all 500ms;
+  margin-top: 75px;
+}
+
+#contentCaliPacProfile img{
+ width:100%; height:auto; cursor:pointer;
+}
+
+#nameChamberProfile{
+ font-size: 28px; text-transform: uppercase; color: #BBB; letter-spacing:4px; cursor:pointer;
+}
+
+#nameStateProfile{
+ font-size: 23px; text-transform: uppercase; color: #BBB; letter-spacing:2px; cursor:pointer;
+}
+
+#imgStateProfile{
+ width:50px; height:50px; margin-top:10px; cursor:pointer;
+}
+
+#imgLegisProfile{
+ border-radius:150px; width:100%; top:0px;
+}
+
+#nameLegisProfile{
+ font-size:23px; letter-spacing:2px; color:#EE4656; cursor:pointer;
+}
+
+#lastNameLegisProfile{
+ font-size:23px; letter-spacing:2px; color:#EE4656; cursor:pointer;
+}
+
+#nameElectionProfile{
+ padding-top:10px; font-size:20px; letter-spacing:2px; color:#BBB; cursor:pointer;
+}
+
+#nameScoreProfile{
+ font-size:20px; letter-spacing:2px; color:#EE4656; text-transform:uppercase;
+}
+
+#valueScoreProfile{
+ font-size:23px; letter-spacing:2px; color:#BBB; cursor:pointer;
+}
+
+#contentSocialIconProfile img{
+ width:50px; height:100%; cursor:pointer;
+}
+
+#contentPartyIconProfile img{
+ width:auto; height:auto; cursor:pointer;
+}
+
+.active {
+  background:#EE4656;
+}
+
+.actived {
+  background:#EE2656;
+}
+
 md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.md-locked-open-add, md-sidenav.md-locked-open-remove, md-sidenav.md-locked-open-remove.md-closed, md-sidenav.md-locked-open.md-closed, md-sidenav.md-locked-open.md-closed.md-sidenav-left, md-sidenav.md-locked-open.md-closed.md-sidenav-right {
-    width: auto;
+  width: auto;
+}
+
+#contentCardGraph{
+  margin-top: 10px;
+}
+
+#divButtonsMenuProfile{
+  text-align:right;
+}
+
+#divCardProfile{
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+#divDonutProfile {
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+
+#workProfile{
+  color:#EE4353;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+#extraProfile{
+  color:#ffc73f;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+#rolProfile{
+  color:#ff974c;
+  font-weight: bold;
+  font-size: 23px;
+}
+
+#doughnut{
+  margin-top: 40px;
+}
+
+@media only screen and (max-width: 1919px) {
+  #slide-profile {
+    background-size: 100% 700px;
+    background-position: top;
+  }
+}
+
+@media only screen and (max-width: 1279px) {
+  #slide-profile {
+    background-size: 100% 500px;
+  }
+
+  #doughnut {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 959px) {
+  #slide-profile {
+    margin-top: 0px;
+  }
+
+  #contentCardGraph{
+    margin-top:90px;
+  }
+
+  #nameChamberProfile {
+    font-size: 25px;
+  }
+
+  #nameStateProfile {
+    font-size: 20px;
+  }
+
+  #imgStateProfile {
+    width: 35px;
+    height: 35px;
+  }
+
+  #nameLegisProfile {
+    font-size: 22px;
+  }
+
+  #nameElectionProfile {
+    font-size: 17px;
+  }
+
+  #nameScoreProfile {
+    font-size: 16px;
+  }
+
+  #valueScore {
+    font-size: 18px;
+  }
+
+  #contentSocialIconProfile img {
+    width: 40px;
+  }
+
+  #contentPartyIconProfile img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  #divButtonsMenuProfile{
+    text-align: center;
+  }
+
+  #contentCardGraph {
+    margin-top: 50px;
+  }
+
+  #divCardProfile{
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+}
+
+@media only screen and (max-width: 440px) {
+  #nameChamberProfile {
+    font-size: 20px;
+  }
+
+  #nameStateProfile {
+    font-size: 15px;
+  }
+
+  #imgStateProfile {
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+  }
+
+  #nameLegisProfile {
+    font-size: 17px;
+  }
+
+  #lastNameLegisProfile {
+    font-size: 17px;
+  }
+
+  #nameElectionProfile {
+    font-size: 15px;
+    padding-top: 0px;
+  }
+
+  #nameScoreProfile {
+    font-size: 10px;
+  }
+
+  #valueScoreProfile {
+    font-size: 17px;
+  }
+
+  #contentSocialIconProfile img {
+    width: 30px;
+  }
+
+  #contentPartyIconProfile img {
+    width: 40px;
+    height: 40px;
+  }
 }

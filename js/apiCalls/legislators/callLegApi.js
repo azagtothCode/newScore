@@ -142,7 +142,7 @@ app.controller('deputyController', ['$scope', '$http', '$cacheFactory', function
               }
 
               if(zone){
-                val.legislator_zone_sil = val.legislator_zone_sil.trim().toLowerCase();
+                val.legislator_zone_sil = val.legislator_state_sil.trim().toLowerCase();
 
                 if(val.legislator_zone_sil == "baja california sur"){
                   val.legislator_zone_sil = "bcs"
