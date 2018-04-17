@@ -155,35 +155,38 @@ app.controller('searchLegislatorController', ['$scope', '$http', function ($scop
 
             $scope.photoProfile=val.id_photo_sil;
 
-            // if(val.legislator_election_sil == "RP" ){
-            //   $scope.electionProfile.val.legislator_election_sil = "Representación Proporcional"
-            // }
-            //
-            // if(val.legislator_election_sil == "MR"){
-            //   $scope.electionProfile.val.legislator_election_sil = "Mayoria Relativa"
-            // }
-            //
-            // if(val.legislator_election_sil == "PM"){
-            //   $scope.electionProfile.val.legislator_election_sil = "Representación Proporcional"
-            // }
-            //
-            // if(val.legislator_facebook_sil){
-            //   $scope.electionProfile.val.legislator_facebook_sil = val.legislator_facebook_sil;
-            // }else{
-            //   $scope.electionProfile.val.legislator_facebook_sil = "none";
-            // }
-            //
-            // if(val.legislator_twitter_senate){
-            //   $scope.electionProfile.val.legislator_twitter_senate = val.legislator_twitter_senate;
-            // }else{
-            //   $scope.electionProfile.val.legislator_twitter_senate = "none";
-            // }
-            //
-            // if(val.legislator_mail_sil){
-            //   $scope.electionProfile.val.legislator_mail_sil = val.legislator_mail_sil;
-            // }else{
-            //   $scope.electionProfile.val.legislator_mail_sil = "none";
-            // }
+            if(val.legislator_election_sil == "RP" ){
+              $scope.electionProfile = val.legislator_election_sil = "Representación Proporcional"
+            }
+
+            if(val.legislator_election_sil == "MR"){
+              $scope.electionProfile = val.legislator_election_sil = "Mayoria Relativa"
+            }
+
+            if(val.legislator_election_sil == "PM"){
+              $scope.electionProfile = val.legislator_election_sil = "Representación Proporcional"
+            }
+
+            if(val.legislator_facebook_sil){
+              $scope.facebookProfile = val.legislator_facebook_sil;
+            }else{
+              val.legislator_facebook_sil = "none";
+              $scope.facebookProfile = val.legislator_facebook_sil;
+            }
+
+            if(val.legislator_twitter_senate){
+              $scope.twitterProfile = val.legislator_twitter_senate;
+            }else{
+              val.legislator_twitter_senate = "none";
+              $scope.twitterProfile = val.legislator_twitter_senate;
+            }
+
+            if(val.legislator_mail_sil){
+              $scope.mailProfile = val.legislator_mail_sil;
+            }else{
+              val.legislator_mail_sil = "none";
+              $scope.mailProfile = val.legislator_mail_sil;
+            }
 
             $scope.scoreProfile=val.legislator_score_sil;
             $scope.partyProfile=val.legislator_party_sil;
@@ -200,7 +203,7 @@ app.controller('searchLegislatorController', ['$scope', '$http', function ($scop
   // Configure all charts
   ChartJsProvider.setOptions({
     chartColors: ['#EE4353', '#ffc73f', '#ff974c'],
-    responsive: false
+    responsive: true
   });
   // Configure all line charts
   ChartJsProvider.setOptions('line', {

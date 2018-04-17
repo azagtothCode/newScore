@@ -51,7 +51,7 @@
       <div layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
        <div flex-xs="5" flex-sm="5" flex-md="5" flex-lg="5" flex-xl="5">
        </div>
-       <div flex-xs="90" flex-sm="90" flex-md="60" flex-lg="60" flex-xl="60">
+       <div flex-xs="100" flex-sm="100" flex-md="60" flex-lg="60" flex-xl="60">
         <div id="divCardProfile"  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
          <div flex-xs="0" flex-sm="0" flex-md="0" flex-lg="0" flex-xl="0">
          </div>
@@ -131,18 +131,18 @@
                         </div>
                         <div style="text-align:center;" flex-xs="55" flex-sm="55" flex-md="55" flex-lg="55" flex-xl="55">
                           <div id="contentSocialIconProfile" layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
-                             <div  flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33" style="display:{{deputyDates.legislator_facebook_sil}};">
-                               <a target="_blank" href="https://www.facebook.com/{{deputyDates.legislator_facebook_sil}}">
+                             <div  flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33" style="display:{{facebookProfile}};">
+                               <a target="_blank" href="https://www.facebook.com/{{facebookProfile}}">
                                 <img onmouseover="this.src='../imgs/svg/facebook_cards_color.svg'" onmouseout="this.src='../imgs/svg/facebook_cards.svg'" src="../imgs/svg/facebook_cards.svg">
                                </a>
                              </div>
-                             <div style="display:{{deputyDates.legislator_twitter_senate}};" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
-                               <a href="https://twitter.com/{{deputyDates.legislator_twitter_senate}}" target="_blank">
+                             <div style="display:{{twitterProfile}};" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                               <a href="https://twitter.com/{{twitterProfile}}" target="_blank">
                                 <img onmouseover="this.src='../imgs/svg/twiter_cards_color.svg'" onmouseout="this.src='../imgs/svg/twiter_cards.svg'" src="../imgs/svg/twiter_cards.svg">
                                </a>
                              </div>
-                             <div  style="display:{{deputyDates.legislator_mail_sil}};" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
-                               <a href="mailto:{{deputyDates.legislator_mail_sil}}">
+                             <div  style="display:{{mailProfile}};" flex-xs="33" flex-sm="33" flex-md="33" flex-lg="33" flex-xl="33">
+                               <a href="mailto:{{mailProfile}}">
                                 <img onmouseover="this.src='../imgs/svg/mail_cards_color.svg'" onmouseout="this.src='../imgs/svg/mail_cards.svg'" src="../imgs/svg/mail_cards.svg">
                                </a>
                              </div>
@@ -162,7 +162,7 @@
           </div>
          </div>
        </div>
-       <div  id="divDonutProfile" flex-xs="5" flex-sm="5" flex-md="35" flex-lg="35" flex-xl="35">
+       <div id="divDonutProfile" hide-xs hide-sm flex-md="35" flex-lg="35" flex-xl="35">
         <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div  flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
             <div layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
@@ -183,13 +183,21 @@
         </div>
         <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
           <div flex-xs="100" flex-sm="100" flex-md="100" flex-lg="100" flex-xl="100">
-            <canvas style="width: 100%;" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
-            </canvas>
+            <div  layout-xs="row" layout-sm="row" layout-md="row" layout-lg="row" layout-xl="row">
+              <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
+              </div>
+              <div flex-xs="80" flex-sm="80" flex-md="80" flex-lg="80" flex-xl="80">
+                <canvas style="width: 100%;" id="doughnut" class="chart chart-doughnut" chart-data="data" chart-labels="labels">
+                </canvas>
+              </div>
+              <div flex-xs="10" flex-sm="10" flex-md="10" flex-lg="10" flex-xl="10">
+              </div>
+            </div>
           </div>
         </div>
        </div>
      </div>
-     <div flex-xs="0" flex-sm="0" flex-md="5"  flex-lg="15"  flex-xl="20">
+     <div flex-xs="0" flex-sm="0" flex-md="5" flex-lg="15" flex-xl="20">
      </div>
     </div>
    </div>

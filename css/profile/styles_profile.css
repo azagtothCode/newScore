@@ -97,24 +97,25 @@ md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.m
 #divDonutProfile {
   margin-top: 30px;
   margin-bottom: 50px;
+  text-align: center;
 }
 
 #workProfile{
   color:#EE4353;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 #extraProfile{
   color:#ffc73f;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 #rolProfile{
   color:#ff974c;
   font-weight: bold;
-  font-size: 23px;
+  font-size: 20px;
 }
 
 #doughnut{
@@ -128,6 +129,20 @@ md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.m
   }
 }
 
+@media only screen and (max-width: 1380px) {
+  #workProfile{
+    font-size: 18px;
+  }
+
+  #extraProfile{
+    font-size: 18px;
+  }
+
+  #rolProfile{
+    font-size: 18px;
+  }
+}
+
 @media only screen and (max-width: 1279px) {
   #slide-profile {
     background-size: 100% 500px;
@@ -135,6 +150,20 @@ md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.m
 
   #doughnut {
     margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 965px) {
+  #workProfile{
+    font-size: 17px;
+  }
+
+  #extraProfile{
+    font-size: 17px;
+  }
+
+  #rolProfile{
+    font-size: 17px;
   }
 }
 
