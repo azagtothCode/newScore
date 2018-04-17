@@ -229,11 +229,7 @@ md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolb
     margin-top: 5px;
     margin-right: 5px;
   }
-
-  #icon-logo {
-    margin-left: 5px;
-  }
-
+  
   #content-imgs-party-score img {
     max-width: 30px;
     margin-top: 12px;

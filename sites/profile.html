@@ -44,7 +44,7 @@
 
   <!-- Begin Slide Profile -->
   <div id="slide-profile" ng-controller="searchLegislatorController" layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">
-    <div id="contentCardGraph" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
+   <div id="contentCardGraph" layout-xs="row" layout-sm="row" layout-md="row" layout-gt-md="row" layout-gt-lg="row" layout-lg="row" layout-xl="row">
      <div flex-xs="0" flex-sm="0" flex-md="5" flex-lg="15" flex-xl="20">
      </div>
      <div flex-xs="100" flex-sm="100" flex-md="90" flex-lg="70" flex-xl="60">
@@ -199,10 +199,20 @@
       </div>
       <div flex-xs="0" flex-sm="0" flex-md="5" flex-lg="15" flex-xl="20">
       </div>
-    </div>
+     </div>
    </div>
-   <div hide-md hide-lg hide-xl show flex="column">
-     as
+   <div hide-md hide-lg hide-xl show-xs show-sm flex="column">
+     <div style="text-align:center;" layout-xs="row" layout-sm="row">
+       <div id="grapWork" flex-xs="33" flex-sm="33">
+         {{workProfile}} Trabajo
+       </div>
+       <div id="grapExtra" flex-xs="33" flex-sm="33">
+         {{extraProfile}} Extra
+       </div>
+       <div id="grapRol" flex-xs="33" flex-sm="33">
+         {{rolProfile}} Rol
+       </div>
+     </div>
    </div>
   </div>
   <div  layout-xs="column" layout-sm="column" layout-md="column" layout-gt-md="column" layout-gt-lg="column" layout-lg="column" layout-xl="column">

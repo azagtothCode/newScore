@@ -122,6 +122,27 @@ md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.m
   margin-top: 40px;
 }
 
+#grapWork{
+  background:#EE4353;
+  font-size: 20px;
+  color:#FFF;
+  letter-spacing:2px;
+}
+
+#grapExtra{
+  background:#ffc73f;
+  font-size: 20px;
+  color:#FFF;
+  letter-spacing:2px;
+}
+
+#grapRol{
+  background:#ff974c;
+  font-size: 20px;
+  color:#FFF;
+  letter-spacing:2px;
+}
+
 @media only screen and (max-width: 1919px) {
   #slide-profile {
     background-size: 100% 700px;
@@ -218,16 +239,8 @@ md-sidenav.md-closed.md-locked-open-add, md-sidenav.md-locked-open, md-sidenav.m
     text-align: center;
   }
 }
-@media only screen and (max-width: 710px) {
-  #divButtonsMenuProfile {
-    text-align: left;
-  }
-}
 
 @media only screen and (max-width: 599px) {
-  #divButtonsMenuProfile{
-    text-align: center;
-  }
 
   #contentCardGraph {
     margin-top: 50px;
